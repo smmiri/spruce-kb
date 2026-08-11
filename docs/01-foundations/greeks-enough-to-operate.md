@@ -1,54 +1,43 @@
 # Greeks enough to operate
 
-You do not need a textbook on every Greek. For credit spreads, **delta** does most of the daily work; **theta** and **implied volatility** explain why time and events matter.
+Greeks describe how an option’s price tends to move. You need only a few for day-to-day decisions.
 
 !!! danger "Not financial advice"
-    Greeks are model-based estimates. They are guides, not guarantees.
+    Greeks are model-based estimates — guides, not guarantees.
 
-## Delta — your strike dial
+## Delta
 
-**Delta** answers two related questions:
+**Delta** estimates how much the option price moves if the stock moves \$1, and is often used as a rough “chance of finishing in the money” heuristic. `[verified]` as a widely taught approximation.
 
-1. Roughly how much the option’s price moves if the stock moves \$1.  
-2. A **rough** sense of how likely the option is to finish in the money — useful, not a promise. `[verified]` as a widely taught heuristic.
+- Long calls have positive delta; long puts have negative delta.  
+- Short options flip the sign of your exposure.  
+- Traders often describe strikes as “20-delta” or “30-delta.” Many education sources discuss short-premium strikes roughly in the **0.15–0.30** absolute band. `[verified]` as a common heuristic range — your exact band is `[operator preference]`.
 
-When you **sell** premium, traders often talk in deltas such as “a 20-delta put” or “a 30-delta call.” Many education sources discuss short strikes in about the **0.15–0.30** absolute-delta band:
+Delta helps you **choose strikes**. It does not replace a risk category (sizing, spreads, coverage).
 
-- Closer to **0.15** → usually further out of the money, less premium, tested less often.  
-- Closer to **0.30** → more premium, tested more often.
+## Theta
 
-Your exact band belongs in a written policy (`[operator preference]`). Liquidity and the **width** of the spread still matter more than any single magic number.
+**Theta** is time decay. Long options usually pay for time; short options may benefit from time if the stock cooperates. Near expiration, prices near the money can move sharply — one reason people match expiration to how often they can review ([weekly vs monthly](expirations-weekly-monthly.md)).
 
-The long option in a spread is simply your insurance further out of the money. Pick it so the **max loss** (\(W - C\)) is a dollar amount you already accepted.
+## Implied volatility
 
-## Theta — why waiting can help (until it does not)
+**IV** is the movement the market is pricing. Higher IV often means richer premiums and larger expected swings. Into **earnings**, IV often rises and can fall after the print — while the stock can still **gap** through your strikes. `[verified]` as common event behavior.
 
-**Theta** describes time decay. If you are short premium and the stock cooperates, time often works in your favor. A spread also has a long leg, so the benefit is partial — not free money.
+## What to skip for now
 
-Near expiration, prices can move sharply around the short strike. That is one reason many people prefer **monthly** expirations for calm income processes, and size **weeklies** smaller. See [Weekly vs monthly](expirations-weekly-monthly.md).
+Deep gamma scalping, vol-surface modeling, and rho.
 
-## Implied volatility — the “how nervous is the market?” dial
+## Habit
 
-**Implied volatility (IV)** is the volatility the options market is pricing in. Higher IV usually means richer premiums *and* a market that expects bigger swings.
+Before any trade — long, short, or multi-leg — be able to say:
 
-Around **earnings**, IV often rises beforehand and can fall quickly afterward (“IV crush”). That sounds friendly to sellers — until a **gap** jumps through your short strike. `[verified]` as common event behavior. Spruce’s risk proposal therefore suggests sitting out new short premium near earnings unless you have an explicit override process.
-
-## What you can skip for now
-
-Deep gamma scalping, vol-surface modeling, and rho. Revisit later if you manage complex books.
-
-## A short pre-entry habit
-
-Before you click send at the broker, be able to say out loud:
-
-1. My short strike’s delta (or % out of the money) is ____ because ____.  
-2. My max loss in dollars is ____.  
-3. My expiration choice is monthly / weekly because ____.  
-4. I am **not** selling naked risk “because the delta looked fine.”
+1. What is my delta / directional exposure in plain language?  
+2. What is my max loss in dollars?  
+3. Does an event (earnings) sit inside my window?
 
 ## What to do next
 
-[Weekly vs monthly](expirations-weekly-monthly.md), then the [defined-risk overview](../03-strategies/defined-risk-credit-spreads.md).
+[Weekly vs monthly](expirations-weekly-monthly.md) → [Ways to manage risk](../04-portfolio-and-risk/risk-management-categories.md).
 
 ## Sources
 

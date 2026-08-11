@@ -77,15 +77,18 @@ nav:
   - Foundations:
       - Glossary: 01-foundations/glossary.md
       - Options basics: 01-foundations/options-basics.md
-      - Credit-spread payoffs: 01-foundations/payoff-diagrams-credit-spreads.md
+      - Single-option payoffs: 01-foundations/single-option-payoffs.md
       - Greeks enough to operate: 01-foundations/greeks-enough-to-operate.md
       - Weekly vs monthly: 01-foundations/expirations-weekly-monthly.md
-  - Strategies:
+      - Credit-spread payoffs: 01-foundations/payoff-diagrams-credit-spreads.md
+  - Risk management:
+      - Ways to manage risk: 04-portfolio-and-risk/risk-management-categories.md
+      - Compare strategies (example): 04-portfolio-and-risk/comparing-strategies-example.md
+      - Risk policy proposal: 04-portfolio-and-risk/risk-policy.md
+  - Credit-spread playbooks:
       - Defined-risk credit spreads: 03-strategies/defined-risk-credit-spreads.md
       - Put credit spread playbook: 03-strategies/put-credit-spread-playbook.md
       - Call credit spread playbook: 03-strategies/call-credit-spread-playbook.md
-  - Portfolio and risk:
-      - Risk policy proposal: 04-portfolio-and-risk/risk-policy.md
   - Canadian accounts:
       - IBKR Canada notes: 05-canadian-accounts/ibkr-canada-notes.md
       - TFSA options constraints: 05-canadian-accounts/tfsa-options-constraints.md

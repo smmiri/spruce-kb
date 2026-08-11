@@ -1,9 +1,13 @@
 # Put credit spread playbook
 
-A practical walk-through of the **put credit spread** (bull put spread): when it fits, how to build it, and how to think about size and trouble.
+Use this after [Ways to manage risk](../04-portfolio-and-risk/risk-management-categories.md) and the [comparison example](../04-portfolio-and-risk/comparing-strategies-example.md). A put credit spread is one defined-risk way to collect premium when you expect the stock to stay above your short put.
 
 !!! danger "Not financial advice"
     Educational draft only — not a recommendation to trade any symbol or size.
+
+## Expectation about risk vs reward
+
+Max loss \(W - C\) is often **larger** than max profit \(C\). That is the usual credit-spread shape (limited reward, defined larger loss). If you want the opposite shape, revisit debit spreads on the comparison page.
 
 ## When this trade matches your story
 

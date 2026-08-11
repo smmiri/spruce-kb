@@ -47,4 +47,4 @@ Plain-language definitions. Skim once, then return whenever a page uses a term y
 | **HITL** | Human-in-the-loop — suggestions allowed; live sending needs a person. |
 | **Dry-run** | Practice / prepare without sending a live order. |
 
-Payoff formulas for PCS and CCS are on [Credit-spread payoffs](payoff-diagrams-credit-spreads.md). Public references live on [Sources](../00-meta/sources.md).
+Payoff formulas for single options are on [Single-option payoffs](single-option-payoffs.md). Credit-spread formulas are on [Credit-spread payoffs](payoff-diagrams-credit-spreads.md). Compare structures on [Compare strategies](../04-portfolio-and-risk/comparing-strategies-example.md). Public references: [Sources](../00-meta/sources.md).

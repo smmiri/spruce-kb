@@ -35,7 +35,7 @@ Ask — and write the answers where you will see them later:
 
 ## What to do next
 
-[Defined-risk credit spreads](../03-strategies/defined-risk-credit-spreads.md).
+[Ways to manage risk](../04-portfolio-and-risk/risk-management-categories.md) — do this before credit-spread playbooks.
 
 ## Sources
 

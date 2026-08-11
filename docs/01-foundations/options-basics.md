@@ -1,63 +1,75 @@
 # Options basics
 
-Before credit spreads make sense, you need four ideas: what a call and a put are, what you pay or receive for them, what “long” and “short” mean, and why Spruce prefers **spreads** over naked short options.
+This page is only about how options work. We will not optimize risk yet. First understand the contracts; later pages compare ways to control loss.
 
 !!! danger "Not financial advice"
     Educational material only. Read your broker’s options risk disclosure before trading.
 
-## The one-sentence picture
+## What an option is
 
-An option is a contract. A **call** is the right to **buy** a stock at a set price (the **strike**) by a set date (**expiration**). A **put** is the right to **sell** at the strike by expiration.
+An option is a contract about a stock (or ETF) at a **strike** price by an **expiration** date.
 
-You can **buy** that right (you pay a **premium**) or **sell** that right (you collect a premium — and take on an obligation).
+- A **call** gives the holder the right to **buy** 100 shares (typical equity contract) at the strike.  
+- A **put** gives the holder the right to **sell** 100 shares at the strike.
 
-## Long vs short, without jargon
+Someone must be on the other side. If you **buy** the option, you pay a **premium**. If you **sell** (write) the option, you receive the premium and take on an obligation if the buyer exercises.
 
-| Role | Cash at open | Everyday analogy | Risk shape |
-|------|--------------|------------------|------------|
-| **Long** (you buy the option) | You pay | Buying insurance or a ticket | Loss usually capped at what you paid |
-| **Short** (you sell / write the option) | You receive | Selling insurance | Risk depends on whether you hedged |
+## Four building blocks
 
-Spruce’s income path is about **collecting premium** — but only when a second option **caps** how bad things can get. That structure is a **credit spread**.
+Every options position is one of these, or a combination of them:
 
-!!! tip "Why not sell a naked call?"
-    An uncovered (naked) short call can lose a theoretically **unlimited** amount if the stock keeps rising. Broker and OCC disclosures call this out clearly. `[verified]` Spruce treats naked shorts as education-only, not an operating default.
+| Position | You… | You want… | Rough loss shape |
+|----------|------|-----------|------------------|
+| Long call | Pay premium | Stock up strongly | Limited to premium paid |
+| Long put | Pay premium | Stock down strongly | Limited to premium paid |
+| Short call | Collect premium | Stock flat or down | Can be very large if stock rips higher |
+| Short put | Collect premium | Stock flat or up | Large if stock crashes (toward zero in theory) |
+
+Later pages show how traders **pair** legs to change those loss shapes. That is risk design — not required to understand the table above.
 
 ## Premium, strike, expiration
 
-- **Premium** — the market price of the option. On a spread, you care about the **net** credit (what you received minus what you paid for the long leg).  
-- **Strike** — the price baked into the contract.  
-- **Expiration** — when the contract ends. Many U.S. equity options are American-style, so early exercise (and assignment on shorts) is possible.
+- **Premium** — the market price of the option. Quoted per share; one contract usually multiplies by 100. A \$2.50 premium is about \$250 per contract before fees.  
+- **Strike** — the contract’s reference price.  
+- **Expiration** — when the contract ends. Many U.S. equity options can be exercised early (American style), so short options can be **assigned** before expiry.
 
-One standard equity option usually covers **100 shares**, so a \$1.00 option price is about \$100 of cash per contract (before fees).
+## In, at, and out of the money
+
+| Term | Call | Put |
+|------|------|-----|
+| **ITM** (in the money) | Stock above strike | Stock below strike |
+| **ATM** (at the money) | Stock near strike | Stock near strike |
+| **OTM** (out of the money) | Stock below strike | Stock above strike |
+
+OTM options are cheaper because they need a bigger move to become valuable at expiration.
 
 ## Intrinsic value and time value
 
-Think of premium as two pieces:
+Premium has two pieces in plain language:
 
-- **Intrinsic** — value if you exercised right now (only in-the-money options have this).  
-- **Time value (extrinsic)** — the rest. It tends to shrink as expiration approaches, all else equal. That decay is related to **theta**, covered next in [Greeks](greeks-enough-to-operate.md).
+- **Intrinsic** — value if exercised right now (only ITM options have this).  
+- **Time value** — the rest. It tends to shrink as expiration approaches if nothing else changes. That decay is related to **theta** (see [Greeks](greeks-enough-to-operate.md)).
 
-Credit spreads mainly harvest **time value**, as long as the stock stays away from the danger zone of your short strike.
+Buyers hope the stock moves enough to overcome time decay. Sellers often hope time decay helps them — which is why selling without a plan for large adverse moves is dangerous.
 
-## From single options to a spread
+## Long vs short mindset
 
-A **vertical credit spread** means:
+Buying an option is paying for a defined ticket: your loss is usually capped at what you paid.
 
-1. You **sell** one option.  
-2. You **buy** another option of the same type and expiration, further out of the money.  
-3. The long option is your insurance. It turns an open-ended short into a **defined** max loss.
+Selling an option is collecting a premium for taking on an obligation. The premium is your **maximum gain** on that single short option if it expires worthless. The loss can be much larger than the premium unless you add protection (shares, cash, or another option).
 
-That is the whole engine behind put credit spreads (PCS) and call credit spreads (CCS). The next page walks through the math and the shape of the payoff.
+That asymmetry — small credit, larger possible loss on naked shorts — is why the next pages spend time on **payoffs** and then on **risk categories**.
 
 ## What to do next
 
-Continue to [Credit-spread payoffs](payoff-diagrams-credit-spreads.md). If a word feels fuzzy, open the [glossary](glossary.md) in another tab.
+1. [Single-option payoffs](single-option-payoffs.md) — pictures and formulas for the four building blocks  
+2. [Greeks enough to operate](greeks-enough-to-operate.md)  
+3. [Weekly vs monthly](expirations-weekly-monthly.md)  
+4. Then [Ways to manage risk](../04-portfolio-and-risk/risk-management-categories.md) — before any playbook  
 
 ## Sources
 
 - OCC *Characteristics and Risks of Standardized Options*  
-- [Investopedia — Vertical spread](https://www.investopedia.com/terms/v/verticalspread.asp)  
 - [Sources index](../00-meta/sources.md)  
 
 ---

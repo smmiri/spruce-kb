@@ -1,9 +1,13 @@
 # Call credit spread playbook
 
-A practical walk-through of the **call credit spread** (bear call spread): useful when you do not want unlimited upside risk, but you still want to collect a credit.
+Use this after the risk-management pages. A call credit spread collects premium when you expect the stock to stay below your short call — with a long call capping melt-up risk.
 
 !!! danger "Not financial advice"
     Educational draft only — not a recommendation to trade any symbol or size.
+
+## Expectation about risk vs reward
+
+Like other credit spreads, max loss often exceeds max profit. That is intentional limited-reward design, not a broken example. Naked short calls remove the cap entirely and can lose without limit. `[verified]`
 
 ## When this trade matches your story
 
