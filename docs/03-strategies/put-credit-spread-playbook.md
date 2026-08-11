@@ -1,59 +1,81 @@
-# Put credit spread (PCS) playbook — draft
+# Put credit spread playbook
 
-Operator draft for defined-risk bullish-to-neutral premium selling (bull put spread).
+A practical walk-through of the **put credit spread** (bull put spread): when it fits, how to build it, and how to think about size and trouble.
 
 !!! danger "Not financial advice"
-    Educational draft only. Not a trade recommendation.
+    Educational draft only — not a recommendation to trade any symbol or size.
 
-## Intent
+## When this trade matches your story
 
-Collect a credit when your thesis is that the underlying **stays above the short put** through expiry (or you manage successfully before max loss is realized).
+You collect a credit when your thesis is: *the stock should stay above my short put*. You are comfortable defining a max loss if you are wrong.
 
-Standard name: **bull put spread** / put credit vertical. `[verified]` structure & payoff — see [payoffs](../01-foundations/payoff-diagrams-credit-spreads.md).
+If that sentence does not match your view, do not force a PCS — look at [CCS](call-credit-spread-playbook.md) or stand aside.
 
-## Structure reminder
+## Structure (quick refresh)
 
-Sell higher-strike put / buy lower-strike put. Max profit ≈ credit; max loss ≈ width − credit.
+- Sell put at \(K_s\)  
+- Buy put at lower strike \(K_l\)  
+- Max profit \(\approx C\) (the credit)  
+- Max loss \(\approx W - C\) where \(W = K_s - K_l\)  
 
-## Entry sketch
+Full charts and a numeric example: [Credit-spread payoffs](../01-foundations/payoff-diagrams-credit-spreads.md).
 
-1. **Thesis** — Why will price not crash through the short strike? (support, quality, valuation snapshot). Direction matches standard bull-put use.  
-2. **Liquidity** — Prefer underlyings/options with acceptable open interest and tight markets; skip junk fills. Numeric OI/volume floors remain `[pending-verify]` / `[operator preference]`.  
-3. **Expiry** — Prefer monthly per [expirations](../01-foundations/expirations-weekly-monthly.md) unless a weekly is sized tighter.  
-4. **Strikes** — Short put near target delta band; long put sets width and max loss.  
-   - `[verified]` as common heuristic: short premium often discussed in ~**0.15–0.30** absolute delta.  
-   - `[operator preference]`: exact short/long targets in your written policy.  
-5. **Size** — Contracts so **max loss ≤** your per-trade cap and post-trade **heat** still within policy. Common retail guidance starts near **1–2% equity** per trade (`[verified]` as common guidance — not a prescription).  
-6. **Events** — No new short premium inside the earnings blackout window in the risk proposal unless you use an audited override. Gap risk into earnings `[verified]` as a phenomenon; **N days** is preference.  
-7. **Journal** — Thesis, strikes, credit, max loss, tags.
+## From idea to order — seven steps
 
-## Management pointers
+### 1. Thesis
 
-- Prefer not entering bad setups over heroic mid-trade repairs.  
-- If threatened: closing for a defined loss, rolling, or holding to expiry are all process choices — write your default.  
-- Do not invent undefined hedges that break the defined-risk profile without policy.
+In one or two sentences: why will price not crash through the short put? Support, quality, valuation — whatever your process uses — belongs in the journal.
 
-## Exit / profit-taking
+### 2. Liquidity
 
-Decide in advance whether you hold for remaining credit decay, close at a profit target, or manage by time (e.g. before last week). Tag any numeric target `[operator preference]`.
+Prefer names and option lines with reasonable volume and open interest so you are not fighting huge bid/ask spreads. Exact numeric floors are `[operator preference]`.
+
+### 3. Expiration
+
+Start with the monthly bias unless you have a reason for a weekly and a smaller size. See [Weekly vs monthly](../01-foundations/expirations-weekly-monthly.md).
+
+### 4. Strikes
+
+Common education material discusses short premium around **0.15–0.30** absolute delta. `[verified]` as a common heuristic range. Lock *your* band in writing. The long put sets width and therefore max loss.
+
+### 5. Size
+
+Count contracts from **max loss**, not from share price. Many retail guides start near **1–2% of equity** per trade as a teaching band. `[verified]` as common guidance — your hard cap is personal. Also check **heat** after the fill (see [risk policy](../04-portfolio-and-risk/risk-policy.md)).
+
+### 6. Events
+
+If earnings (or another binary event) sit inside your blackout window, skip or wait. Gaps can ignore your carefully chosen delta.
+
+### 7. Journal
+
+Record thesis, strikes, credit, max loss, and tags. Future-you needs that more than a perfect chart annotation.
+
+## If the trade goes wrong
+
+There is no magic repair kit. Typical choices:
+
+- Close for a defined loss  
+- Roll (change expiry/strikes) with eyes open on new risk  
+- Hold toward expiration if that is your written policy  
+
+Decide the *default* on a calm day, not while the stock is cascading.
 
 ## Anti-patterns
 
-- Sizing off “premium looks big” instead of max loss  
-- Ignoring sector/underlying concentration  
-- Treating PCS as “safe” because it is defined-risk  
-- Naked short put “temporary” without cash/defined structure  
+- Sizing because “the credit looks big”  
+- Stacking many PCS on the same sector until one theme sinks them all  
+- Treating “defined risk” as “small risk”  
+- Skipping the long put “just this once”
+
+## What to do next
+
+[Call credit spread playbook](call-credit-spread-playbook.md) · [Risk policy](../04-portfolio-and-risk/risk-policy.md)
 
 ## Sources
 
 - [Investopedia — Vertical spread](https://www.investopedia.com/terms/v/verticalspread.asp)  
 - [Sources index](../00-meta/sources.md)  
 
-## Related
-
-- [CCS playbook](call-credit-spread-playbook.md)  
-- [Risk policy](../04-portfolio-and-risk/risk-policy.md)  
-
 ---
 
-*Footer: Not financial advice. Verify broker rules yourself.*
+*Not financial advice. Verify broker rules yourself.*

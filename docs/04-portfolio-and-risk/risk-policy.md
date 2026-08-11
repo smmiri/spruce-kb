@@ -1,71 +1,73 @@
 # Risk policy proposal
 
-Starter controls for a defined-risk credit-spread process. Numbers mix **common retail guidance** (tagged) with **curriculum proposals** you should adapt — not locked law and **not financial advice**.
+Rules beat improvisation. This page is a **starter template** for defined-risk credit spreads: common retail guidance mixed with curriculum defaults you should adapt.
 
 !!! danger "Not financial advice"
-    You must set and accept your own limits. This page does not tell you what you can afford to lose.
+    Only you can decide what you can afford to lose. These numbers are not advice and not optimal by law of nature.
 
-## Principles
+## Principles in plain language
 
-1. Size and heat off **defined max loss**, not notional. `[verified]` as standard for spreads.  
-2. **Undefined risk and naked shorts banned** for live ops until explicit unlock. Naked short call loss is theoretically unlimited (`[verified]` — OCC / broker disclosures).  
-3. Prefer prevention (quality setups, event filters) over heroic mid-disaster management.  
-4. Emotional sizing (“start small and experiment”) is **process advice**, not a substitute for the table below.
+1. Measure risk as **max loss**, not as the stock’s share price.  
+2. Ban **naked / undefined** short options for live use until you explicitly unlock them. Naked short calls can lose without a structural ceiling. `[verified]`  
+3. Prefer skipping a bad entry over “fixing” a disaster mid-flight.  
+4. Start smaller than your ego wants. That is process advice, not a substitute for the table below.
 
-## Starter control table
+## Starter controls
 
-| Control | Starter default | Notes from cross-check | Suggested enforcement |
-|---------|-----------------|------------------------|------------------------|
-| Max loss per trade | **User-set hard cap** (currency and/or % equity) | Retail guidance commonly cites ~**1–2% of equity** per trade as a starting band `[verified]` as common guidance | Hard block |
-| Portfolio heat | Sum of open defined max losses ≤ **20%** of equity | Common conservative writeups often cite ~**10–15%** aggregate max-loss; **20% is toward aggressive** → `[operator preference]` | Hard block new entries |
-| Single underlying concentration | Max loss to one underlying ≤ **10%** equity | Independent sizing notes often use tighter single-name caps (~3–8%); **10% is loose** → `[operator preference]` | Hard block |
-| Single sector concentration | ≤ **25%** of heat in one sector | Common bands ~15–25%; curriculum default at top of band `[operator preference]` | Warn → optional hard |
-| Undefined risk | **Banned** | Aligns with OCC uncovered-writing risk warnings | Hard block |
-| Naked short options | **Banned** (education only) | Same | Hard block |
-| Earnings | No new short premium within **N** trading days of earnings (starter **N = 5**) | Gap risk + IV dynamics `[verified]`; sitting out is common; **exact N** is `[operator preference]` | Hard block (override = audited) |
-| Weekly vs monthly | Prefer monthly; weeklies with tighter size | Gamma rises near expiry — supports preference, not a ban | Warn |
-| Correlated ETF doubles | Flag SPY/QQQ/mega-cap overlap | Correlation ≠ diversification `[verified]` as concept | Warn |
-| Max open positions | Soft cap (e.g. 8–12) for cognitive load | `[operator preference]` | Warn |
-| Kill-switch | Global halt: no new risk-taking; alerts only | Process design | Manual |
+| Control | Starter default | What independent guidance often says | How to treat it |
+|---------|-----------------|--------------------------------------|-----------------|
+| Max loss per trade | You must set a hard cap (cash and/or % of equity) | Teaching material often cites ~**1–2% of equity** per trade `[verified]` as common guidance | Make it personal and write it down |
+| Portfolio heat | Sum of open max losses ≤ **20%** of equity | Conservative writeups often sit nearer **10–15%**; 20% is looser `[operator preference]` | Adapt deliberately |
+| One underlying | Max loss to one name ≤ **10%** equity | Many guides use tighter single-name caps `[operator preference]` | Adapt deliberately |
+| One sector | ≤ **25%** of heat in one sector | Common discussion band ~15–25% `[operator preference]` | Warn or hard-block |
+| Undefined / naked risk | Banned | Aligns with OCC-style uncovered writing warnings | Hard ban |
+| Earnings window | No new short premium inside **N** days (starter **N = 5**) | Gap + IV behavior `[verified]`; exact N is preference | Hard block unless audited override |
+| Weeklies | Prefer monthlies; weeklies smaller | Gamma rises near expiry | Soft preference |
+| Too many positions | Soft cap (for example 8–12) | Cognitive load for part-time operators | Soft cap |
+| Kill switch | Stop new risk-taking; alerts only | Process design | Manual |
 
-## Heat definition (draft)
+### Heat, as a formula
 
 \[
-\text{heat} = \frac{\sum \text{open defined max losses}}{\text{equity}}
+\text{heat} = \frac{\text{sum of open defined max losses}}{\text{account equity}}
 \]
 
-Hypothetical fills for candidates should be included when checking “after this trade.”
+When you size a **new** trade, include its max loss in the sum *as if* it already filled.
 
-## Adapting the numbers
+## A gentler starting point
 
-If you want numbers closer to common conservative retail bands:
+If 20% heat feels aggressive, try this trial band first:
 
-- Per-trade: start from **1–2% equity** (or a fixed currency floor that is ≤ that %)  
-- Heat: consider **10–15%**, single-name **≤5–8%**, sector **≤15–20%** — then consciously choose looser/tighter  
+- About **1–2%** equity max loss per trade  
+- About **10–15%** total heat  
+- About **5–8%** in one underlying  
+- About **15–20%** of heat in one sector  
 
-## What this page is not
+Then loosen or tighten on purpose — not by accident after a hot streak.
 
-- A promise these percentages are optimal  
-- Permission to ignore broker margin or buying-power limits  
-- Tax or TFSA advice — see Canadian pages  
+## Write your own numbers
 
-## Write your own limits
+Capture them somewhere private you will actually obey:
 
-- [ ] Max loss per trade: _______________  
-- [ ] Heat / underlying / sector caps: _______________  
-- [ ] Earnings window N days: _______________  
-- [ ] Soft max open positions: _______________  
+| Decision | Your number |
+|----------|-------------|
+| Max loss per trade | |
+| Max portfolio heat | |
+| Max loss per underlying | |
+| Max heat per sector | |
+| Earnings blackout (trading days) | |
+| Soft max open positions | |
+
+## What to do next
+
+If you are in Canada, read [IBKR notes](../05-canadian-accounts/ibkr-canada-notes.md), [TFSA constraints](../05-canadian-accounts/tfsa-options-constraints.md), and [cash vs margin](../05-canadian-accounts/cash-vs-margin.md) before you assume a strategy is allowed where you fund it.
 
 ## Sources
 
-- Retail position-sizing / portfolio-heat writeups (common 1–2% per trade; ~10–15% heat bands) — see [Sources](../00-meta/sources.md)  
-- OCC *Characteristics and Risks of Standardized Options* (uncovered writing)  
-- Event-vol / IV-crush explainers (e.g. tastylive)  
-
-## Related
-
-- [Cash vs margin](../05-canadian-accounts/cash-vs-margin.md)  
+- Retail position-sizing discussions (1–2% per trade; heat bands) — see [Sources](../00-meta/sources.md)  
+- OCC *Characteristics and Risks of Standardized Options*  
+- Event-vol explainers (for example tastylive on IV crush)  
 
 ---
 
-*Footer: Not financial advice. Verify broker and CRA rules yourself.*
+*Not financial advice. Verify broker and CRA rules yourself.*

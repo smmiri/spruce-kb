@@ -1,62 +1,50 @@
-# Glossary (operator-facing)
+# Glossary
 
-Short definitions for reading playbooks and risk policy.
+Plain-language definitions. Skim once, then return whenever a page uses a term you do not remember.
 
 !!! danger "Not financial advice"
     Educational definitions only.
 
-## Core structure terms
+## Building blocks
 
-| Term | Meaning in Spruce |
-|------|-------------------|
-| **Call** | Option giving the right to buy the underlying at the strike before/at expiry (style depends on contract). |
-| **Put** | Option giving the right to sell the underlying at the strike. |
-| **Premium** | Price of the option (or net credit/debit of a multi-leg structure), paid by buyer / received by seller. |
-| **Strike** | Price level in the option contract. |
-| **Expiration / expiry** | Date the option ceases to exist (American vs European exercise rules vary). |
-| **ITM (in the money)** | Call: underlying above strike. Put: underlying below strike. |
-| **OTM (out of the money)** | Call: underlying below strike. Put: underlying above strike. |
-| **ATM (at the money)** | Underlying near the strike. |
+| Term | Plain meaning |
+|------|----------------|
+| **Call** | Contract with the right to **buy** the stock at the strike. |
+| **Put** | Contract with the right to **sell** the stock at the strike. |
+| **Premium** | Price of the option (or the net credit/debit of a multi-leg trade). |
+| **Strike** | The price named in the contract. |
+| **Expiration** | When the contract ends. |
+| **ITM** | In the money — a call when stock is above the strike; a put when stock is below. |
+| **OTM** | Out of the money — the opposite of ITM. |
+| **ATM** | At the money — stock near the strike. |
 
 ## Spreads and risk shape
 
-| Term | Meaning in Spruce |
-|------|-------------------|
-| **Credit spread** | Multi-leg options structure that collects net premium (credit) when opened; typically short one option and long another for protection. |
-| **PCS (put credit spread)** | Short put + long put further OTM (lower strike). Bullish-to-neutral bias; defined max loss. Also called a bull put spread. |
-| **CCS (call credit spread)** | Short call + long call further OTM (higher strike). Bearish-to-neutral / “won’t rip higher” bias; defined max loss. Also called a bear call spread. |
-| **Defined risk** | Maximum loss known at entry from structure (e.g. width of strikes minus credit, before fees). |
-| **Undefined risk** | Loss theoretically unbounded or extremely large relative to premium (e.g. naked short call). **Banned for live Spruce ops** until policy unlock. |
-| **Max loss** | Worst-case loss on a defined-risk trade (structure + fees); Spruce sizes and heat off this, not notional. |
-| **Max profit** | On a credit spread, typically the net credit received (if expires worthless / managed as planned). |
-| **Breakeven** | Underlying price at expiry where P&amp;L ≈ 0 (ignoring fees), given the structure. |
+| Term | Plain meaning |
+|------|----------------|
+| **Credit spread** | You open a multi-leg options trade and **receive** a net credit. Usually one short option plus one long option for protection. |
+| **PCS / put credit spread** | Sell a put, buy a lower put. Also called a **bull put spread**. You want the stock to stay above the short put. |
+| **CCS / call credit spread** | Sell a call, buy a higher call. Also called a **bear call spread**. You want the stock to stay below the short call. |
+| **Defined risk** | You know the worst-case loss from the structure at entry (before fees). |
+| **Undefined risk** | Loss can grow without a clean structural cap (classic example: naked short call). |
+| **Max loss** | Worst case on a defined-risk trade. Spruce sizes positions from this number. |
+| **Max profit** | On a credit spread, roughly the credit you collected. |
+| **Breakeven** | Stock price at expiry where P&amp;L is about zero (ignoring fees). |
 
-## Greeks and probability language
+## Greeks and portfolio words
 
-| Term | Meaning in Spruce |
-|------|-------------------|
-| **Delta** | Rough sensitivity of option price to a $1 move in the underlying; also a rough OTM/ITM probability heuristic. Primary strike-selection Greek for this system. |
-| **Theta** | Time decay; short premium generally benefits if other factors hold. |
-| **IV (implied volatility)** | Market’s priced-in volatility; affects premium rich/cheap feel. |
-| **Buying power (BP)** | Capital the broker reserves for the position; not the same as max loss. |
+| Term | Plain meaning |
+|------|----------------|
+| **Delta** | Sensitivity to a \$1 stock move; also a rough “chance of finishing ITM” heuristic. |
+| **Theta** | Time decay. |
+| **IV** | Implied volatility — how much movement the market is pricing. |
+| **Buying power** | Capital your broker sets aside for the trade — not the same as max loss. |
+| **Heat** | Sum of open defined max losses, compared with account equity. |
+| **Roll** | Close a position and reopen related strikes/expiry to manage risk or time. |
+| **CSP** | Cash-secured put — short put backed by cash for assignment. |
+| **Wheel** | A cycle of cash-secured puts and covered calls. Later topic. |
+| **Covered call** | Short call against shares you already own. |
+| **HITL** | Human-in-the-loop — suggestions allowed; live sending needs a person. |
+| **Dry-run** | Practice / prepare without sending a live order. |
 
-## Portfolio and process
-
-| Term | Meaning in Spruce |
-|------|-------------------|
-| **Heat** | Sum of open defined max losses relative to equity (see risk policy). |
-| **Roll** | Close a position (or legs) and open a related one at a later expiry and/or different strikes. |
-| **CSP (cash-secured put)** | Short put collateralized by cash sufficient for assignment; often a wheel building block. |
-| **Wheel** | Cycle of CSP → possible assignment → covered call → rinse. Later curriculum. |
-| **Covered call (CC)** | Short call against long shares. |
-| **HITL** | Human-in-the-loop: system may suggest; human approves before execute. |
-| **Dry-run** | Prepare / simulate without sending live orders. |
-
-## Naming aliases
-
-| Spruce term | Common textbook name |
-|-------------|----------------------|
-| PCS | Bull put spread / put credit vertical |
-| CCS | Bear call spread / call credit vertical |
-
-Payoff definitions for those structures are `[verified]` — see [payoffs](payoff-diagrams-credit-spreads.md) and [Sources](../00-meta/sources.md).
+Payoff formulas for PCS and CCS are on [Credit-spread payoffs](payoff-diagrams-credit-spreads.md). Public references live on [Sources](../00-meta/sources.md).

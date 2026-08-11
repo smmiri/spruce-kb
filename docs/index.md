@@ -1,17 +1,28 @@
 # Spruce Knowledge Base
 
-Educational docs for a **defined-risk options** operating process.
+A calm, step-by-step guide to **defined-risk credit spreads** — how they work, how to size them, and what Canadian retail accounts usually allow.
 
 !!! danger "Not financial advice"
-    Spruce is an educational knowledge base. Nothing here is a recommendation to buy, sell, or hold any security. Verify all brokerage, tax, and account rules with your broker and qualified advisors (including CRA where relevant).
+    Nothing here is a recommendation to buy, sell, or hold any security. Verify brokerage, tax, and account rules with your broker and qualified advisors (including the CRA where relevant).
 
-## Start here
+## How to walk this site
 
-1. [How to use this site](00-meta/how-to-use-this-site.md) — suggested reading order  
-2. [Glossary](01-foundations/glossary.md) — operator terms  
-3. Foundations → Strategies → [Risk policy proposal](04-portfolio-and-risk/risk-policy.md) → Canadian notes  
-4. Optional: [Sources](00-meta/sources.md) — public references used for cross-checks  
+Read in order the first time. Each page builds on the last.
 
-## Scope
+1. [How to use this site](00-meta/how-to-use-this-site.md)  
+2. [Glossary](01-foundations/glossary.md) — skim now, return when a word is new  
+3. [Options basics](01-foundations/options-basics.md) → [Payoffs](01-foundations/payoff-diagrams-credit-spreads.md) → [Greeks](01-foundations/greeks-enough-to-operate.md) → [Weekly vs monthly](01-foundations/expirations-weekly-monthly.md)  
+4. [Defined-risk overview](03-strategies/defined-risk-credit-spreads.md) → [PCS playbook](03-strategies/put-credit-spread-playbook.md) → [CCS playbook](03-strategies/call-credit-spread-playbook.md)  
+5. [Risk policy proposal](04-portfolio-and-risk/risk-policy.md)  
+6. Canadian notes: [IBKR](05-canadian-accounts/ibkr-canada-notes.md) · [TFSA](05-canadian-accounts/tfsa-options-constraints.md) · [Cash vs margin](05-canadian-accounts/cash-vs-margin.md)  
 
-This site covers curriculum and playbooks for defined-risk credit spreads (PCS / CCS), a starter risk-policy proposal, and Canadian retail account notes. It is not a brokerage product, signal service, or live trading system.
+Optional: [Sources](00-meta/sources.md) for the public references behind tagged claims.
+
+## What you will learn
+
+- What a credit spread is, in plain language  
+- How much you can make and lose on put and call credit spreads  
+- A starter risk policy you can adapt  
+- Why many Canadians run multi-leg spreads in a **margin / non-registered** account first  
+
+This is a knowledge base, not a brokerage, signal service, or live trading system.

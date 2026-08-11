@@ -1,0 +1,18 @@
+/* Calmer reading rhythm for long-form curriculum pages */
+.md-typeset {
+  line-height: 1.75;
+  font-size: 0.82rem;
+}
+
+.md-typeset p,
+.md-typeset li {
+  max-width: 42rem;
+}
+
+.md-typeset table {
+  font-size: 0.78rem;
+}
+
+.md-typeset .admonition {
+  font-size: 0.8rem;
+}

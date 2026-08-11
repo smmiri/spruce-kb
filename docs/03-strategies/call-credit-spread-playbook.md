@@ -1,43 +1,71 @@
-# Call credit spread (CCS) playbook — draft
+# Call credit spread playbook
 
-Operator draft for defined-risk “won’t rip higher” premium selling (bear call spread).
+A practical walk-through of the **call credit spread** (bear call spread): useful when you do not want unlimited upside risk, but you still want to collect a credit.
 
 !!! danger "Not financial advice"
-    Educational draft only. Not a trade recommendation.
+    Educational draft only — not a recommendation to trade any symbol or size.
 
-## Intent
+## When this trade matches your story
 
-Collect a credit when your thesis is that the underlying **stays below the short call** through expiry (or you manage successfully). Typical use: stretched names where you refuse the theoretically unlimited risk of a **naked** short call (`[verified]` unlimited risk for uncovered calls).
+You collect a credit when your thesis is: *the stock should stay below my short call*. Often that is a name that already looks extended, expensive, or unlikely to keep ripping higher in the near term — still a thesis you must write down, not a vibe.
 
-Standard name: **bear call spread** / call credit vertical. `[verified]` — [Investopedia vertical spreads](https://www.investopedia.com/terms/v/verticalspread.asp).
+If you need the stock to rise, this is the wrong tool. Consider [PCS](put-credit-spread-playbook.md) or no trade.
 
-Use CCS when you do not expect a large short-term rise; pair with a journaled research bias (valuation, technical location, “extended” tape).
+!!! tip "Why a spread instead of a naked short call?"
+    A naked short call can lose a theoretically unlimited amount if the stock keeps climbing. `[verified]` The long call in a CCS is the cap.
 
-## Structure reminder
+## Structure (quick refresh)
 
-Sell lower-strike call / buy higher-strike call. Max profit ≈ credit; max loss ≈ width − credit. See [payoffs](../01-foundations/payoff-diagrams-credit-spreads.md).
+- Sell call at \(K_s\)  
+- Buy call at higher strike \(K_h\)  
+- Max profit \(\approx C\)  
+- Max loss \(\approx W - C\) where \(W = K_h - K_s\)  
 
-## Entry sketch
+Charts: [Credit-spread payoffs](../01-foundations/payoff-diagrams-credit-spreads.md).
 
-1. **Thesis** — Why will price not melt up through the short call?  
-2. **Liquidity** — Same bar as PCS.  
-3. **Expiry** — Monthly bias; weeklies only with tighter size.  
-4. **Strikes** — Short call at target delta; long call defines width.  
-   - `[verified]` common short-premium heuristic band ~0.15–0.30Δ.  
-   - `[operator preference]` for exact targets in your policy.  
-5. **Size** — Max loss and heat policy — not “% of portfolio in premium.”  
-6. **Events** — Earnings blackout per risk proposal.  
-7. **Journal** — Include why CCS instead of PCS (or both on different names).
+## From idea to order — seven steps
 
-## Management pointers
+### 1. Thesis
 
-Same philosophy as PCS: avoid broken setups; when wrong, choose close / roll / hold with eyes open.
+Why will price not melt up through the short call? Journal it.
+
+### 2. Liquidity
+
+Same bar as PCS — skip option chains you cannot exit cleanly.
+
+### 3. Expiration
+
+Monthly bias; weeklies only with tighter size.
+
+### 4. Strikes
+
+Short call in a delta band you already chose (common teaching range ~0.15–0.30 absolute delta). `[verified]` as heuristic. Long call sets width and max loss.
+
+### 5. Size
+
+Use max loss and portfolio heat — not “percent of the account sitting in premium.” Policy numbers live on the [risk page](../04-portfolio-and-risk/risk-policy.md).
+
+### 6. Events
+
+Respect the earnings / event blackout in your policy.
+
+### 7. Journal
+
+Include why you chose CCS rather than PCS (or why both appear on different names).
+
+## If the trade goes wrong
+
+Same honest menu as PCS: close, roll, or hold under rules you wrote when calm. Strong trends can run farther than a small credit “feels like” it should allow.
 
 ## Anti-patterns
 
 - Naked short call because “I almost sold a spread”  
-- Stacking correlated CCS (e.g. many mega-cap tech) until sector heat blows past policy  
-- Ignoring that a strong trend can run farther than your credit  
+- Many correlated CCS positions that are really one big tech bet  
+- Ignoring that a squeeze can tag your short strike quickly
+
+## What to do next
+
+[Risk policy proposal](../04-portfolio-and-risk/risk-policy.md) · [Defined-risk overview](defined-risk-credit-spreads.md)
 
 ## Sources
 
@@ -45,12 +73,6 @@ Same philosophy as PCS: avoid broken setups; when wrong, choose close / roll / h
 - OCC / broker disclosures on uncovered call writing  
 - [Sources index](../00-meta/sources.md)  
 
-## Related
-
-- [PCS playbook](put-credit-spread-playbook.md)  
-- [Defined-risk overview](defined-risk-credit-spreads.md)  
-- [Risk policy](../04-portfolio-and-risk/risk-policy.md)  
-
 ---
 
-*Footer: Not financial advice. Verify broker rules yourself.*
+*Not financial advice. Verify broker rules yourself.*

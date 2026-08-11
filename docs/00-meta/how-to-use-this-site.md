@@ -1,40 +1,29 @@
 # How to use this site
 
-Spruce KB is a curriculum you read in order — not a signal feed.
+Spruce is written as a short course. You do not need prior options experience — only patience to read in order.
 
 !!! danger "Not financial advice"
     Educational material only. Verify broker and CRA rules yourself.
 
-## Suggested reading order
+## Suggested path
+
+Spend one evening on foundations, another on strategies and risk, and a third on Canadian account notes if that applies to you.
 
 1. [Disclaimer](disclaimer.md)  
-2. [Glossary](../01-foundations/glossary.md)  
-3. Foundations: [options basics](../01-foundations/options-basics.md) → [payoffs](../01-foundations/payoff-diagrams-credit-spreads.md) → [Greeks enough](../01-foundations/greeks-enough-to-operate.md) → [weekly vs monthly](../01-foundations/expirations-weekly-monthly.md)  
-4. Strategies: [defined-risk overview](../03-strategies/defined-risk-credit-spreads.md) → [PCS playbook](../03-strategies/put-credit-spread-playbook.md) → [CCS playbook](../03-strategies/call-credit-spread-playbook.md)  
+2. [Glossary](../01-foundations/glossary.md) — keep this tab open while you read  
+3. Foundations: [options basics](../01-foundations/options-basics.md) → [payoffs](../01-foundations/payoff-diagrams-credit-spreads.md) → [Greeks](../01-foundations/greeks-enough-to-operate.md) → [weekly vs monthly](../01-foundations/expirations-weekly-monthly.md)  
+4. Strategies: [defined-risk overview](../03-strategies/defined-risk-credit-spreads.md) → [PCS](../03-strategies/put-credit-spread-playbook.md) → [CCS](../03-strategies/call-credit-spread-playbook.md)  
 5. [Risk policy proposal](../04-portfolio-and-risk/risk-policy.md)  
-6. Canadian: [IBKR notes](../05-canadian-accounts/ibkr-canada-notes.md) → [TFSA constraints](../05-canadian-accounts/tfsa-options-constraints.md) → [cash vs margin](../05-canadian-accounts/cash-vs-margin.md)  
-7. Optional: [Sources](sources.md)  
+6. Canadian notes if you trade in Canada  
 
-## Claim tags
+## Tags you will see
 
 | Tag | Meaning |
 |-----|---------|
-| `[verified]` | Consistent with ≥2 independent sources or a primary broker/regulator page (see [Sources](sources.md)) |
-| `[operator preference]` | A documented operating choice for this curriculum, not a market law |
-| `[pending-verify]` | Still needs stronger primary-source backup |
-
-## Local preview
-
-```bash
-pip install -r requirements.txt
-# Full local site (includes private operator docs):
-mkdocs serve
-# Public deploy preview:
-mkdocs serve -f mkdocs.public.yml
-```
-
-Open `http://127.0.0.1:8000/`.
+| `[verified]` | Matches independent public sources or a primary broker page |
+| `[operator preference]` | A curriculum default you can change in your own written rules |
+| `[pending-verify]` | Still needs a stronger primary source |
 
 ## What this site is not
 
-A brokerage, signal service, tax advisor, or live order system. Automation tooling (if any) is out of scope for these pages.
+A signal feed, tax advisor, or “what to trade tomorrow” page. When something looks like a checklist of questions for *your* broker, treat it as a conversation guide — not a form to submit here.

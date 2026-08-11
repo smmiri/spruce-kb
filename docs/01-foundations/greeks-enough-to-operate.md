@@ -1,57 +1,61 @@
 # Greeks enough to operate
 
-Only what you need to pick strikes, judge time, and avoid Greek theater.
+You do not need a textbook on every Greek. For credit spreads, **delta** does most of the daily work; **theta** and **implied volatility** explain why time and events matter.
 
 !!! danger "Not financial advice"
-    Educational material only. Greeks are model-dependent approximations.
+    Greeks are model-based estimates. They are guides, not guarantees.
 
-## Delta (primary)
+## Delta — your strike dial
 
-**Delta** answers two operator questions:
+**Delta** answers two related questions:
 
-1. Roughly how much the option’s price moves if the underlying moves $1.  
-2. A **rough heuristic** for the chance the option finishes ITM — **not** a guarantee. `[verified]` as a widely taught approximation (true probabilities depend on the return distribution and model).
+1. Roughly how much the option’s price moves if the stock moves \$1.  
+2. A **rough** sense of how likely the option is to finish in the money — useful, not a promise. `[verified]` as a widely taught heuristic.
 
-`[verified]` as common short-premium heuristic: many education sources discuss selling roughly in the **0.15–0.30** absolute-delta band (lower delta → higher chance OTM / less premium; higher delta → more premium / tested more often).
+When you **sell** premium, traders often talk in deltas such as “a 20-delta put” or “a 30-delta call.” Many education sources discuss short strikes in about the **0.15–0.30** absolute-delta band:
 
-Lock your own short/long delta (or % OTM) bands in a written policy. A common long-wing starting idea is further OTM than the short (sometimes discussed near ~0.10 absolute delta); treat the **exact** numbers as `[operator preference]` — liquidity and width matter more than a magic delta.
+- Closer to **0.15** → usually further out of the money, less premium, tested less often.  
+- Closer to **0.30** → more premium, tested more often.
 
-## Theta (secondary)
+Your exact band belongs in a written policy (`[operator preference]`). Liquidity and the **width** of the spread still matter more than any single magic number.
 
-Short premium generally **benefits from time decay** if the short strike stays safe. Spreads still have a long leg whose theta partially offsets. Do not assume “theta always pays you” once the short is threatened.
+The long option in a spread is simply your insurance further out of the money. Pick it so the **max loss** (\(W - C\)) is a dollar amount you already accepted.
 
-Near expiry, **gamma** rises for ATM options — short-dated (weekly) shorts can move against you faster. That supports Spruce’s monthly-bias *preference*, not a ban on weeklies.
+## Theta — why waiting can help (until it does not)
 
-## IV (enough)
+**Theta** describes time decay. If you are short premium and the stock cooperates, time often works in your favor. A spread also has a long leg, so the benefit is partial — not free money.
 
-Higher **implied volatility** usually means richer premiums and wider expected moves. Selling into rich IV can look attractive; it can also mean the market prices a larger move.
+Near expiration, prices can move sharply around the short strike. That is one reason many people prefer **monthly** expirations for calm income processes, and size **weeklies** smaller. See [Weekly vs monthly](expirations-weekly-monthly.md).
 
-Into scheduled events (especially **earnings**), IV often rises beforehand and can **crush** afterward if uncertainty resolves — but a gap through your short strike can dominate any vega benefit. `[verified]` as common event-vol behavior; strategy around earnings remains policy (see risk page).
+## Implied volatility — the “how nervous is the market?” dial
 
-## What you can ignore for now
+**Implied volatility (IV)** is the volatility the options market is pricing in. Higher IV usually means richer premiums *and* a market that expects bigger swings.
 
-- Full gamma scalping theory  
-- Vega portfolios and vol surface modeling  
-- Rho  
+Around **earnings**, IV often rises beforehand and can fall quickly afterward (“IV crush”). That sounds friendly to sellers — until a **gap** jumps through your short strike. `[verified]` as common event behavior. Spruce’s risk proposal therefore suggests sitting out new short premium near earnings unless you have an explicit override process.
 
-## Operator checklist
+## What you can skip for now
 
-- [ ] Short strike chosen with an explicit delta (or % OTM) rationale  
-- [ ] Long strike defines width and max loss you accept  
-- [ ] Expiry chosen with weekly-vs-monthly policy in mind  
-- [ ] No naked short “because delta looked fine”  
+Deep gamma scalping, vol-surface modeling, and rho. Revisit later if you manage complex books.
+
+## A short pre-entry habit
+
+Before you click send at the broker, be able to say out loud:
+
+1. My short strike’s delta (or % out of the money) is ____ because ____.  
+2. My max loss in dollars is ____.  
+3. My expiration choice is monthly / weekly because ____.  
+4. I am **not** selling naked risk “because the delta looked fine.”
+
+## What to do next
+
+[Weekly vs monthly](expirations-weekly-monthly.md), then the [defined-risk overview](../03-strategies/defined-risk-credit-spreads.md).
 
 ## Sources
 
-- [tastylive — Delta as probability gauge](https://www.tastylive.com/news-insights/options-delta-predictive-probability-gauge-directional-measure)  
+- [tastylive — Delta as a probability gauge](https://www.tastylive.com/news-insights/options-delta-predictive-probability-gauge-directional-measure)  
 - [tastylive — IV crush](https://www.tastylive.com/concepts-strategies/iv-crush)  
 - [Sources index](../00-meta/sources.md)  
 
-## Next
-
-- [Weekly vs monthly expirations](expirations-weekly-monthly.md)  
-- [Defined-risk credit spreads](../03-strategies/defined-risk-credit-spreads.md)  
-
 ---
 
-*Footer: Not financial advice. Verify broker rules yourself.*
+*Not financial advice. Verify broker rules yourself.*

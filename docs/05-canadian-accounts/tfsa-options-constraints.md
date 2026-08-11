@@ -1,68 +1,67 @@
 # TFSA options constraints
 
-**Verify with your broker and the CRA (and a tax advisor).** This page is a caution map updated with broker documentation — not clearance to trade any strategy inside a TFSA.
+**Verify with your broker, the CRA, and a tax advisor.** This page is a caution map from broker documentation — not permission to trade a strategy inside a TFSA.
 
-!!! danger "Not financial advice / verify required"
-    Registered-account rules and broker allowlists differ and change. Illegal or broker-prohibited activity is never in scope for Spruce.
+!!! danger "Not financial advice"
+    Registered-account rules differ by firm and change over time.
 
-## Curriculum default profile
+## The short version
 
-Treat TFSA as a **separate, narrower policy profile**:
+Treat the TFSA as a **narrower** options profile than a U.S.-style margin account. For Spruce’s workhorse **PCS/CCS** process, prefer a **non-registered / margin** account until your broker confirms each strategy for TFSA in writing.
 
-- Do **not** assume US-style options freedom inside TFSA.  
-- Prefer defined-risk **PCS/CCS** process in a **non-registered / margin** account until you have **broker-written confirmation** for each strategy in TFSA.  
+Why: at major Canadian brokers, multi-leg spreads often sit at a higher options level that requires margin, while registered accounts are capped lower.
 
-Cross-check reason: at major Canadian brokers, **multi-leg spreads are often a higher options level that requires a margin account**, while registered accounts are capped at lower levels.
+## What Interactive Brokers Canada publishes
 
-## Interactive Brokers Canada (primary page)
-
-Per [IBC TFSA trading permissions](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php) (`[verified]` against broker page as of review):
+From [IBC’s TFSA trading permissions](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php) (`[verified]` against that page):
 
 - **No margin** in TFSA; purchases paid in full; account debits not permitted.  
-- Options called out include: **long** equity calls/puts; **covered calls**; **protective puts**.  
-- Do **not** assume credit spreads are available in an IBC TFSA without explicit confirmation in Client Portal for *your* account.
+- Options listed include **long** equity calls and puts, **covered calls**, and **protective puts**.  
+- Do **not** assume credit spreads are available in an IBC TFSA without confirming for your account.
 
-## Questrade (example of industry level caps)
+## What Questrade publishes (industry example)
 
-Per [Questrade options levels](https://www.questrade.com/learning/using-questrade/options-levels) (`[verified]` against broker page; page notes update Mar 2026):
+From [Questrade options levels](https://www.questrade.com/learning/using-questrade/options-levels) (`[verified]` against that page):
 
-- Registered accounts (RRSP, TFSA, FHSA) can only be approved up to **Level 2**.  
-- **Spreads = Level 3** and require a **margin** account (and minimum equity).  
-- Level 2 includes covered calls / cash-secured puts (with notes); not the Spruce CCS/PCS workhorse path.
+- Registered accounts (TFSA / RRSP / FHSA) max out at **Level 2**.  
+- **Spreads are Level 3** and require a **margin** account.  
+- Level 2 covers ideas like covered calls and cash-secured puts (with notes) — not the CCS/PCS path these playbooks describe.
 
-Other brokers may differ — always check *your* firm’s matrix.
+Other brokers may differ. Always check *your* matrix.
 
-## Typically more constrained / often restricted
+## Usually restricted or blocked in TFSA
 
-| Theme | Why it matters |
-|-------|----------------|
-| **Naked / uncovered** short options | Margin / short-sale style risk; blocked in TFSA at brokers surveyed |
-| **Multi-leg short premium / spreads** | Often Level 3+ and margin-only (e.g. Questrade) |
-| **Leverage / borrowing** inside TFSA | Not permitted (IBC: no margin in TFSA) |
-| **High-frequency / “business” trading** | CRA may scrutinize whether TFSA activity is carrying on a business — **ask a tax advisor** `[pending-verify]` for your facts |
+| Theme | Why people flag it |
+|-------|--------------------|
+| Naked / uncovered short options | Margin-style risk; blocked in TFSA at brokers surveyed here |
+| Multi-leg short-premium spreads | Often Level 3+ / margin-only |
+| Borrowing / leverage inside TFSA | Not permitted (IBC: no margin in TFSA) |
+| Very frequent speculative trading | CRA may ask whether activity looks like a business — ask a tax advisor |
 
-## Often discussed as more workable (still broker-dependent)
+## Sometimes workable (still broker-dependent)
 
 | Theme | Caveat |
 |-------|--------|
-| Long shares / ETFs | Still verify product eligibility |
-| Long calls / long puts | Listed on IBC TFSA permissions; still not Spruce’s primary income process |
-| Covered calls if shares held and broker allows | On IBC TFSA list; confirm for your account |
-| Cash-secured puts | Broker-specific; Questrade documents CSP at Level 2 including some registered cases — **confirm**; not a substitute for verifying your broker |
+| Long shares / ETFs | Confirm product eligibility |
+| Long calls / long puts | On IBC’s TFSA list; not Spruce’s primary income process |
+| Covered calls when you hold the shares | On IBC’s list; confirm for your account |
+| Cash-secured puts | Broker-specific; do not infer IBKR from another firm’s blog |
 
-## Operator checklist
+## Before you fund a strategy in TFSA
 
-- [ ] Listed every strategy you might use (PCS, CCS, CSP, CC, …)  
-- [ ] Asked your broker which are allowed in TFSA vs margin **for your approvals**  
-- [ ] Documented answers privately  
-- [ ] Read [Sources](../00-meta/sources.md)  
+| Step | Purpose |
+|------|---------|
+| List every strategy you might use (PCS, CCS, CSP, covered call, …) | You cannot confirm what you have not named |
+| Ask the broker which of those are allowed in TFSA vs margin | Get it in writing or screenshot Client Portal |
+| Keep that answer private with your records | Public sites should not hold your account details |
+| Skim [Sources](../00-meta/sources.md) | Know which public pages were used for this summary |
 
 ## Sources
 
 - [Interactive Brokers Canada — RRSP/TFSA information](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php)  
 - [Questrade — Options levels](https://www.questrade.com/learning/using-questrade/options-levels)  
-- [IBKR Campus — Options as part of an RRSP/TFSA strategy](https://www.interactivebrokers.com/campus/traders-insight/securities/options/options-as-part-of-an-rrsp-tfsa-strategy/) (education; still verify tax)  
+- [IBKR Campus — Options as part of an RRSP/TFSA strategy](https://www.interactivebrokers.com/campus/traders-insight/securities/options/options-as-part-of-an-rrsp-tfsa-strategy/)  
 
 ---
 
-*Footer: Not financial advice. Verify with broker and CRA.*
+*Not financial advice. Verify with broker and CRA.*

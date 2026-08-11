@@ -1,54 +1,45 @@
 # Cash vs margin
 
-How collateral and buying power interact with defined-risk spreads — still not advice.
+Collateral and buying power are easy to confuse with “max loss.” They are related, but they are not the same number.
 
 !!! danger "Not financial advice"
-    Margin magnifies losses and can trigger forced liquidation. Confirm terms with your broker.
+    Margin can amplify losses and trigger forced liquidation. Confirm terms with your broker.
 
-## Cash account (concept)
+## Cash account, in plain language
 
-- You generally fund positions with settled cash.  
-- Cash-secured puts require setting aside cash for assignment (where allowed).  
-- Spreads may still be restricted depending on broker approval — **ask**.
+You generally pay for positions with settled cash. A cash-secured put, where allowed, means setting aside cash for assignment. Whether spreads are allowed at all still depends on your broker’s approval matrix.
 
-## Margin account (concept)
+## Margin account, in plain language
 
-- Broker extends buying power subject to margin rules.  
-- Defined-risk spreads often use less BP than naked shorts — still not “free.”  
-- Max loss of the structure ≠ margin requirement (they can differ).
+The broker extends buying power under margin rules. Defined-risk spreads often use less buying power than naked shorts — that does **not** mean the trade is free or small. The structure’s **max loss** and the broker’s **margin requirement** can differ.
 
-## Canadian broker cross-check
+## What Canadian broker pages imply for Spruce
 
-| Observation | Implication | Tag |
-|-------------|-------------|-----|
-| IBC: **no margin** in TFSA | Cannot rely on margin-style multi-leg in TFSA | `[verified]` (IBC page) |
-| Questrade: **spreads = Level 3**, require margin; registered capped at Level 2 | CCS/PCS live process → **margin / non-registered** first | `[verified]` (Questrade page) |
-| Naked shorts need higher approval / more BP | Aligns with curriculum ban for live ops | `[verified]` as industry pattern |
+| Observation | Practical implication | Tag |
+|-------------|----------------------|-----|
+| IBC: **no margin** inside TFSA | Do not plan margin-style multi-leg trades in TFSA by default | `[verified]` (IBC page) |
+| Questrade: spreads are **Level 3** and need margin; registered accounts stop at Level 2 | Live CCS/PCS process usually means **margin / non-registered** first | `[verified]` (Questrade page) |
+| Naked shorts need higher approval | Matches the curriculum ban on naked risk for live ops | Common industry pattern |
 
-## Curriculum operating preference (draft)
+## Curriculum preference (draft)
 
-| Preference | Rationale | Status |
-|------------|-----------|--------|
-| Live CCS/PCS process on **non-registered margin** first | Matches how Canadian brokers typically gate multi-leg | Proposed default |
-| TFSA = narrow allowlist profile | IBC/Questrade docs support narrow TFSA options set | Proposed |
-| Never circumvent broker risk controls via API | Compliance / fail-closed | Assumed |
+| Preference | Why |
+|------------|-----|
+| Run CCS/PCS on **non-registered margin** first | Matches how Canadian brokers typically gate multi-leg spreads |
+| Keep TFSA on a narrow allowlist | Matches published TFSA option lists |
+| Never bypass broker risk controls via API | Fail closed |
 
-## Link to risk policy
+## Heat vs buying power
 
-Portfolio **heat** is an equity-relative self-limit. Broker BP is a separate ceiling. Both must pass.
+[Portfolio heat](../04-portfolio-and-risk/risk-policy.md) is your own equity-relative limit. Broker buying power is a second ceiling. Both must be satisfied.
 
-## Sources
+## Related reading
 
-- [IBC TFSA permissions](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php)  
-- [Questrade options levels](https://www.questrade.com/learning/using-questrade/options-levels)  
-- [Sources index](../00-meta/sources.md)  
-
-## Related
-
-- [Risk policy proposal](../04-portfolio-and-risk/risk-policy.md)  
+- [Risk policy](../04-portfolio-and-risk/risk-policy.md)  
 - [IBKR Canada notes](ibkr-canada-notes.md)  
 - [TFSA constraints](tfsa-options-constraints.md)  
+- [Sources](../00-meta/sources.md)  
 
 ---
 
-*Footer: Not financial advice. Verify broker rules yourself.*
+*Not financial advice. Verify broker rules yourself.*

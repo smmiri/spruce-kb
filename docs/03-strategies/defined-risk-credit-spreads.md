@@ -1,57 +1,49 @@
 # Defined-risk credit spreads
 
-Why Spruce starts here — and what is education-only until policy unlocks.
+Spruce starts here for a reason: you can know the worst case **before** you click send, and you can add those worst cases up across the whole account.
 
 !!! danger "Not financial advice"
-    Educational material only. Defined-risk still means you can lose the full defined max loss.
+    “Defined risk” still means you can lose the full defined max loss. It is not “safe.”
 
-## Priority thesis
+## The idea in one paragraph
 
-For operators who want **batch review**, not screen-watching:
+A **credit spread** sells one option and buys another further out of the money for protection. You collect a net credit. If the stock behaves, you keep most of that credit. If it does not, your loss is capped by the width of the strikes minus the credit — see [payoffs](../01-foundations/payoff-diagrams-credit-spreads.md).
 
-1. **Know max loss at entry** — size and portfolio heat become computable. `[verified]` for vertical credit spreads: max loss ≈ width − credit.  
-2. **Avoid undefined short premium** in live ops — naked shorts stay education-only. Uncovered short call risk is theoretically unlimited (`[verified]` — OCC).  
-3. **Two workhorse structures:** put credit spreads (PCS / bull put) and call credit spreads (CCS / bear call). Naming `[verified]` via standard vertical-spread references.
+That cap is why Spruce prefers spreads over naked short calls. Uncovered short calls can lose a theoretically unlimited amount if the stock keeps rising. `[verified]`
 
-Wheel / CSP / covered call / PMCC / iron condors appear later in a fuller curriculum; they are not the default operating set on these pages.
+## Two workhorse trades
 
-## Defined vs undefined
+| Your view | Structure | Everyday story |
+|-----------|-----------|----------------|
+| “I do not expect a sharp drop through my put strikes” | **Put credit spread (PCS)** / bull put | Collect credit while staying bullish-to-neutral |
+| “I do not expect a sharp melt-up through my call strikes” | **Call credit spread (CCS)** / bear call | Collect credit while capping upside disaster |
 
-| Shape | Example | Spruce live ops |
-|-------|---------|-----------------|
-| Defined | PCS, CCS (vertical credit spreads with long protection) | Preferred |
-| Undefined / extreme | Naked short call; many naked shorts | **Banned** until explicit policy unlock |
+Both names and payoff shapes are standard vertical-spread material. `[verified]`
 
-## When to reach for which
+Wheel strategies, cash-secured puts, and covered calls belong in a fuller curriculum later. They are not required to understand these pages.
 
-| Bias | Structure | Rough idea |
-|------|-----------|------------|
-| Constructive / “won’t break support” | PCS (bull put) | Collect credit; risk is a sharp selloff through the put spread |
-| Cautious / “won’t melt-up through resistance” | CCS (bear call) | Collect credit; risk is a sharp rally through the call spread |
+## A calm process (before tools and automation)
 
-`[verified]` directionally: bull put is a bullish credit vertical; bear call is a bearish credit vertical ([Investopedia vertical spreads](https://www.investopedia.com/terms/v/verticalspread.asp)).
+1. Write a short thesis for the stock and the direction/range you need.  
+2. Choose expiration (monthly bias is the starter preference).  
+3. Choose strikes → compute **max loss** → check your risk policy.  
+4. Enter only if size and heat still fit.  
+5. Journal what you did and why.  
+6. Manage with rules you wrote in advance — not improvisation under stress.
 
-Always journal the thesis; technical/fundamental filters belong on a watchlist process you maintain separately.
+## Canadian reality check
 
-## What “good process” looks like
+At several Canadian brokers, multi-leg **spreads** sit behind higher options approvals and often need a **margin** account, while TFSA permissions are narrower. That is why the Canadian pages suggest confirming spreads on the account you will actually use — often non-registered/margin first. Details: [TFSA constraints](../05-canadian-accounts/tfsa-options-constraints.md).
 
-1. Thesis on underlying and direction/range  
-2. Expiry choice (monthly bias proposal)  
-3. Strikes → compute max loss → check risk policy  
-4. Written entry / manage / exit rules  
-5. Journal outcomes  
+## What to do next
 
-## Canadian note
+Open the [PCS playbook](put-credit-spread-playbook.md), then the [CCS playbook](call-credit-spread-playbook.md). Finish with the [risk policy proposal](../04-portfolio-and-risk/risk-policy.md) so sizing has numbers.
 
-Multi-leg spreads are often gated behind higher options levels / **margin** accounts at Canadian brokers — another reason Spruce defaults live CCS/PCS discussion toward non-registered/margin (see [TFSA](../05-canadian-accounts/tfsa-options-constraints.md)).
+## Sources
 
-## Playbooks
-
-- [Put credit spread playbook](put-credit-spread-playbook.md)  
-- [Call credit spread playbook](call-credit-spread-playbook.md)  
-- [Risk policy proposal](../04-portfolio-and-risk/risk-policy.md)  
-- [Sources](../00-meta/sources.md)  
+- [Investopedia — Vertical spread](https://www.investopedia.com/terms/v/verticalspread.asp)  
+- [Sources index](../00-meta/sources.md)  
 
 ---
 
-*Footer: Not financial advice. Verify broker rules yourself.*
+*Not financial advice. Verify broker rules yourself.*

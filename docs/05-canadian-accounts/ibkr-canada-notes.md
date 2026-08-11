@@ -1,44 +1,41 @@
 # IBKR Canada notes
 
-Starting notes for Canadian retail using Interactive Brokers Canada. Confirm everything in Client Portal / in writing for **your** account.
+Starting notes if you use Interactive Brokers Canada. Always confirm the current rules in Client Portal for **your** account — permissions change.
 
 !!! danger "Not financial advice"
-    Educational notes only. Product availability and approvals change.
+    Educational notes only.
 
-## Default posture
+## Working assumption
 
-Working assumption for this curriculum: run defined-risk credit-spread process primarily in a **non-registered / margin** account until each strategy is confirmed allowed in any registered account you use.
+For defined-risk **credit spreads**, many Canadians begin in a **non-registered margin** account, and treat TFSA as a narrower profile until the broker confirms each strategy in writing. That matches how IBC documents TFSA options (long options, covered calls, protective puts — not a blank check for spreads). Details: [TFSA constraints](tfsa-options-constraints.md).
 
-Cross-check: IBC documents **no margin** in TFSA and lists long options / covered calls / protective puts for TFSA — not a blank check for spreads. See [TFSA constraints](tfsa-options-constraints.md).
+## Questions to ask your broker
 
-## Confirm with the broker
+Use this as a conversation guide when you message support or review Client Portal. It is not a form to fill on this website.
 
-- [ ] Options trading permissions / strategy approvals for **spreads** on the account you will use  
-- [ ] CAD vs USD funding and FX conversion behavior  
-- [ ] Margin vs cash account configuration (non-registered)  
-- [ ] Exercise/assignment handling and notifications  
-- [ ] Tax lot / export options (Flex queries, activity statements) for journaling  
-- [ ] Re-read [IBC TFSA/RRSP information](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php) after any permission change  
+| Topic | Why it matters |
+|-------|----------------|
+| Options permissions for **multi-leg spreads** | Spreads need the right approval level on the account you will fund |
+| CAD vs USD funding and FX conversion | Spreads on U.S. names often involve USD; conversion costs and cash balances matter |
+| Margin vs cash configuration | Buying power and what strategies are allowed differ |
+| Exercise and assignment notices | Short options can be assigned; you need to know how you are notified |
+| Statements / Flex exports for journaling | Later you will want fills and tax lots in a reproducible export |
+| Re-read [IBC TFSA/RRSP information](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php) after permission changes | Published allowlists are the source of truth |
 
-## Pattern day trader
+## Pattern day trader notes
 
-US PDT rules are US-specific. Still respect **IBKR margin, pattern flags, and account configuration** that apply to you. Do not assume US forum advice maps 1:1 to IBKR Canada.
+U.S. PDT rules are U.S.-specific. Still respect whatever margin and account controls IBKR applies to you. Forum advice from U.S. accounts does not always map to IBKR Canada.
 
 ## Risk disclosure
 
-Before trading options, read the OCC disclosure *Characteristics and Risks of Standardized Options* (brokers typically require acknowledgment). Uncovered writing risks are called out explicitly there.
+Before trading options, read the OCC document *Characteristics and Risks of Standardized Options* (brokers usually require an acknowledgment). Uncovered writing risks are called out there.
 
-## Sources
-
-- [IBC — RRSP/TFSA/FHSA information](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php)  
-- [IBC — Account guide](https://www.interactivebrokers.ca/en/accounts/account-guide.php) (margin not allowed in TFSA)  
-- [Sources index](../00-meta/sources.md)  
-
-## Related
+## Related reading
 
 - [TFSA options constraints](tfsa-options-constraints.md)  
 - [Cash vs margin](cash-vs-margin.md)  
+- [Sources](../00-meta/sources.md)  
 
 ---
 
-*Footer: Not financial advice. Verify with IBKR Canada and advisors.*
+*Not financial advice. Verify with IBKR Canada and advisors.*

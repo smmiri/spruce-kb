@@ -1,51 +1,47 @@
 # Weekly vs monthly expirations
 
-Proposal for a defined-risk income process, with notes on why short-dated shorts behave differently.
+Expiration is not only a calendar date. It changes how fast your P&amp;L can move and how often you must make decisions.
 
 !!! danger "Not financial advice"
     Educational material only.
 
-## Proposal (draft)
+## A simple preference (you can change it)
 
-| Preference | Stance | Tag |
-|------------|--------|-----|
-| **Default for defined-risk income** | Prefer **monthly** (or longer dated) credit spreads | `[operator preference]` |
-| **Weeklies** | Allowed with **tighter size** and stricter event/earnings checks | `[operator preference]` |
-| **Hold to expiry vs close early** | Document both in your own manage/exit policy | Operator choice |
+| Choice | Spruce starter stance | Tag |
+|--------|----------------------|-----|
+| Default for income-style credit spreads | Prefer **monthly** (or longer) expirations | `[operator preference]` |
+| Weeklies | Allowed, but **smaller size** and stricter event checks | `[operator preference]` |
+| Hold to expiry vs close early | Write your own rule; both are valid processes | Your policy |
 
-## Why monthly bias is defensible (not mandatory)
+## Why monthlies feel calmer for many people
 
-- Near expiry, **gamma** for ATM options rises — short-dated shorts can move P&amp;L faster. Supports tighter size on weeklies.  
-- Fewer roll decisions if you review in batches; less weekend pin/gamma stress from ultra-short dated shorts.  
-- Weeklies can still fit tactical views if size respects heat.
+Near expiration, option prices near the money can swing harder (higher **gamma**). Ultra-short dated shorts demand more attention. If you review trades in batches after work, fewer expirations in flight usually means fewer surprises.
 
-These are risk-management reasons, not proof monthlies outperform.
+That is a process argument — not proof that monthlies always make more money.
 
-## Earnings and events
+## Earnings still come first
 
-Regardless of weekly vs monthly: new short premium inside **N trading days** of earnings is blocked in the risk-policy proposal (starter default: 5 days) unless an audited override exists in your process.
+Whatever expiration you pick, a stock can **gap** overnight around earnings, and implied volatility often behaves differently into and after the report. `[verified]`
 
-`[verified]`: IV often elevates into earnings and can crush after; stocks can **gap** through strikes. `[operator preference]`: exact **N = 5**.
+The [risk policy](../04-portfolio-and-risk/risk-policy.md) proposes blocking **new** short premium inside a window before earnings (starter idea: about five trading days). The exact window is `[operator preference]`.
 
-## Cognitive load
+## Decide for yourself
 
-Prefer fewer expiries in flight. Soft caps on open positions live in the risk policy proposal.
+Ask — and write the answers where you will see them later:
 
-## Questions to decide for yourself
+1. Do I default to monthly credit spreads?  
+2. If I use weeklies, what is the maximum share of portfolio heat I allow in very short-dated trades?  
+3. When a spread is threatened, is my default to close, roll, or hold?
 
-- [ ] Accept monthly-default proposal?  
-- [ ] If weeklies allowed, what max % of heat may sit in ≤7 DTE?  
-- [ ] Default when a spread is threatened: hold, close, or roll?  
+## What to do next
+
+[Defined-risk credit spreads](../03-strategies/defined-risk-credit-spreads.md).
 
 ## Sources
 
 - [tastylive — IV crush](https://www.tastylive.com/concepts-strategies/iv-crush)  
 - [Sources index](../00-meta/sources.md)  
 
-## Next
-
-- [Risk policy proposal](../04-portfolio-and-risk/risk-policy.md)  
-
 ---
 
-*Footer: Not financial advice. Verify broker rules yourself.*
+*Not financial advice. Verify broker rules yourself.*
