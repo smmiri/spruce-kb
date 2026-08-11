@@ -30,7 +30,21 @@ Suggested reading order: [How to use this site](docs/00-meta/how-to-use-this-sit
 
 On push to `main`, [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) builds with **`mkdocs.public.yml`** and deploys to GitHub Pages.
 
-**First-time setup:** Repo → Settings → Pages → Build and deployment → Source: **GitHub Actions**, then re-run the workflow.
+Canonical URL: **https://spruce.smmiri.com/**
+
+**First-time setup (fixes `configure-pages` / site 404):**
+
+1. Repo → **Settings → Pages** → Build and deployment → Source: **GitHub Actions**
+2. Custom domain: `spruce.smmiri.com` (DNS below), then enable **Enforce HTTPS** when GitHub offers it
+3. Re-run the workflow (Actions → Deploy to GitHub Pages → Run workflow)
+
+### DNS (Cloudflare, zone `smmiri.com`)
+
+| Type | Name | Target | Proxy |
+|------|------|--------|-------|
+| CNAME | `spruce` | `smmiri.github.io` | DNS only |
+
+`docs/CNAME` is copied into the built site so GitHub keeps the custom domain on each deploy.
 
 ## License
 

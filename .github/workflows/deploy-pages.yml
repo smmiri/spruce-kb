@@ -1,8 +1,10 @@
-# Build the MkDocs site and publish to GitHub Pages.
+# Build the public MkDocs site and publish to GitHub Pages.
+# Canonical URL: https://spruce.smmiri.com/
 #
-# FIRST-TIME SETUP (fixes deploy 404):
+# FIRST-TIME SETUP (fixes configure-pages "Get Pages site failed" / site 404):
 #   Repo → Settings → Pages → Build and deployment → Source: "GitHub Actions"
-#   Then re-run this workflow (Actions tab → Deploy to GitHub Pages → Run workflow).
+#   Custom domain: spruce.smmiri.com (CNAME spruce → smmiri.github.io, DNS only)
+#   Then re-run this workflow (Actions → Deploy to GitHub Pages → Run workflow).
 #
 # Local review:
 #   Full (includes private pages):  mkdocs serve
@@ -49,6 +51,9 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          # Enables Pages on first run if Settings → Pages was never set to Actions.
+          enablement: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

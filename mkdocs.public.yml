@@ -10,6 +10,7 @@
 INHERIT: mkdocs.yml
 
 site_author: Spruce
+site_url: https://spruce.smmiri.com/
 site_dir: site-public
 
 copyright: >
