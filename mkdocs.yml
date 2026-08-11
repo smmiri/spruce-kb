@@ -1,0 +1,79 @@
+site_name: Spruce Knowledge Base
+site_description: Educational knowledge base for defined-risk options operating process
+site_author: Spruce
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  custom_dir: overrides
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social: []
+
+copyright: >
+  Not financial advice. Spruce is an educational system.
+  Licensed under Apache-2.0.
+
+nav:
+  - Home: index.md
+  - Meta:
+      - Disclaimer: 00-meta/disclaimer.md
+      - How to use this site: 00-meta/how-to-use-this-site.md
+      - Sources: 00-meta/sources.md
+      - Verification and sources (private): 00-meta/verification-and-sources.md
+      - Open decisions (private): 00-meta/open-decisions.md
+      - Migration tracker (private): 00-meta/migration-tracker.md
+  - Foundations:
+      - Glossary: 01-foundations/glossary.md
+      - Options basics: 01-foundations/options-basics.md
+      - Credit-spread payoffs: 01-foundations/payoff-diagrams-credit-spreads.md
+      - Greeks enough to operate: 01-foundations/greeks-enough-to-operate.md
+      - Weekly vs monthly: 01-foundations/expirations-weekly-monthly.md
+  - Strategies:
+      - Defined-risk credit spreads: 03-strategies/defined-risk-credit-spreads.md
+      - Put credit spread playbook: 03-strategies/put-credit-spread-playbook.md
+      - Call credit spread playbook: 03-strategies/call-credit-spread-playbook.md
+  - Portfolio and risk:
+      - Risk policy proposal: 04-portfolio-and-risk/risk-policy.md
+  - Canadian accounts:
+      - IBKR Canada notes: 05-canadian-accounts/ibkr-canada-notes.md
+      - TFSA options constraints: 05-canadian-accounts/tfsa-options-constraints.md
+      - Cash vs margin: 05-canadian-accounts/cash-vs-margin.md

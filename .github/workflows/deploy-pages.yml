@@ -1,0 +1,67 @@
+# Build the MkDocs site and publish to GitHub Pages.
+#
+# FIRST-TIME SETUP (fixes deploy 404):
+#   Repo → Settings → Pages → Build and deployment → Source: "GitHub Actions"
+#   Then re-run this workflow (Actions tab → Deploy to GitHub Pages → Run workflow).
+#
+# Local review:
+#   Full (includes private pages):  mkdocs serve
+#   Public deploy preview:          mkdocs serve -f mkdocs.public.yml
+#   Open http://127.0.0.1:8000/
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build public MkDocs site
+        run: mkdocs build -f mkdocs.public.yml --strict
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site-public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
