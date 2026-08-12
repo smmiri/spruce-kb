@@ -19,7 +19,7 @@ The broker extends buying power under margin rules. Defined-risk spreads often u
 |-------------|----------------------|-----|
 | IBC: **no margin** inside TFSA | Do not plan margin-style multi-leg trades in TFSA by default | `[verified]` (IBC page) |
 | Questrade: spreads are **Level 3** and need margin; registered accounts stop at Level 2 | Live CCS/PCS process usually means **margin / non-registered** first | `[verified]` (Questrade page) |
-| Naked shorts need higher approval | Matches the curriculum ban on naked risk for live ops | Common industry pattern |
+| Naked shorts need higher approval | Matches the curriculum ban on naked risk for live trading | Common industry pattern |
 
 ## Curriculum preference (draft)
 
@@ -36,7 +36,7 @@ The broker extends buying power under margin rules. Defined-risk spreads often u
 ## Related reading
 
 - [Risk policy](../04-portfolio-and-risk/risk-policy.md)  
-- [IBKR Canada notes](ibkr-canada-notes.md)  
+- [Canadian brokers](canadian-brokers.md)  
 - [TFSA constraints](tfsa-options-constraints.md)  
 - [Sources](../00-meta/sources.md)  
 

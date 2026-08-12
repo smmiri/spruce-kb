@@ -30,7 +30,7 @@ Read in order the first time.
 
 ### 4. Canadian account notes
 
-11. [IBKR](05-canadian-accounts/ibkr-canada-notes.md) · [TFSA](05-canadian-accounts/tfsa-options-constraints.md) · [Cash vs margin](05-canadian-accounts/cash-vs-margin.md)  
+11. [Canadian brokers](05-canadian-accounts/canadian-brokers.md) · [TFSA](05-canadian-accounts/tfsa-options-constraints.md) · [Cash vs margin](05-canadian-accounts/cash-vs-margin.md)  
 
 Optional: [Sources](00-meta/sources.md).
 

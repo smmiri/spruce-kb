@@ -22,7 +22,7 @@ Maps each Spruce decision (D1–D14) to KB pages to read before you decide. Mark
 | **D2** | Max loss per trade | Hard cap required; retail guidance often ~1–2% equity | [Risk policy](../04-portfolio-and-risk/risk-policy.md), PCS/CCS playbooks, [verification](verification-and-sources.md) | Week-2 workshop | Open — _______ |
 | **D3** | Heat / concentration | 20% / 10% / 25% proposed (note: common heat bands often ~10–15%) | [Risk policy](../04-portfolio-and-risk/risk-policy.md) | Week-2 workshop | Proposed — _______ |
 | **D4** | Strategy priority | CCS/PCS first; wheel later; PMCC/IC later | [Defined-risk](../03-strategies/defined-risk-credit-spreads.md), playbooks | Week-2 workshop | Assumed — _______ |
-| **D5** | Account / TFSA posture | Non-registered/margin first; TFSA narrow (IBC/Questrade docs support) | [IBKR](../05-canadian-accounts/ibkr-canada-notes.md), [TFSA](../05-canadian-accounts/tfsa-options-constraints.md), [cash vs margin](../05-canadian-accounts/cash-vs-margin.md) | Week-2 workshop | Open — _______ |
+| **D5** | Account / TFSA posture | Non-registered/margin first; TFSA narrow (IBC/Questrade docs support) | [Canadian brokers](../05-canadian-accounts/canadian-brokers.md), [TFSA](../05-canadian-accounts/tfsa-options-constraints.md), [cash vs margin](../05-canadian-accounts/cash-vs-margin.md) | Week-2 workshop | Open — _______ |
 | **D6** | IBKR API path | Gateway + ib_insync **or** Client Portal | Automation concepts (Week 2 stub) | Ops Weeks 3–4 | Open — defer |
 | **D7** | KB generator | MkDocs Material | This site | Week 1 | **Assumed / in use** |
 | **D8** | Ops UI stack | FastAPI + HTMX | Automation concepts (Week 2) | Ops start | Assumed — defer |

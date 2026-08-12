@@ -56,10 +56,16 @@ Other brokers may differ. Always check *your* matrix.
 | Keep that answer private with your records | Public sites should not hold your account details |
 | Skim [Sources](../00-meta/sources.md) | Know which public pages were used for this summary |
 
+## Related reading
+
+- [Canadian brokers](canadian-brokers.md)  
+- [Cash vs margin](cash-vs-margin.md)  
+
 ## Sources
 
 - [Interactive Brokers Canada — RRSP/TFSA information](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php)  
 - [Questrade — Options levels](https://www.questrade.com/learning/using-questrade/options-levels)  
+- [Wealthsimple — Options](https://www.wealthsimple.com/en-ca/trade/options)  
 - [IBKR Campus — Options as part of an RRSP/TFSA strategy](https://www.interactivebrokers.com/campus/traders-insight/securities/options/options-as-part-of-an-rrsp-tfsa-strategy/)  
 
 ---

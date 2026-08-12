@@ -24,11 +24,20 @@ Public references used to check definitions and common heuristics. This is not a
 - [tastylive — Delta as a probability gauge](https://www.tastylive.com/news-insights/options-delta-predictive-probability-gauge-directional-measure)  
 - [tastylive — IV crush](https://www.tastylive.com/concepts-strategies/iv-crush)
 
-## Canadian accounts
+## Canadian accounts and brokers
 
 - [Interactive Brokers Canada — RRSP/TFSA information](https://www.interactivebrokers.ca/en/accounts/rsp_tfsa_information.php)  
 - [Interactive Brokers Canada — Account guide](https://www.interactivebrokers.ca/en/accounts/account-guide.php)  
+- [Interactive Brokers Canada — Options commissions](https://www.interactivebrokers.ca/en/pricing/commissions-options.php)  
+- [Interactive Brokers Canada — Trading APIs](https://www.interactivebrokers.ca/en/trading/ib-api.php)  
 - [Questrade — Options levels](https://www.questrade.com/learning/using-questrade/options-levels)  
+- [Questrade — Transaction fees](https://www.questrade.com/pricing/self-directed-commissions-plans-fees/transaction)  
+- [Questrade Developer Platform](https://developer.questrade.com/)  
+- [Wealthsimple — Options](https://www.wealthsimple.com/en-ca/trade/options)  
+- [TD Direct Investing — Pricing](https://www.td.com/ca/en/investing/direct-investing/pricing)  
+- [Qtrade — Pricing](https://www.qtrade.ca/en/investor/pricing.html)  
+- [National Bank Direct Brokerage — Pricing](https://www.nbc.ca/en/direct-brokerage/pricing.html)  
+- [CI Direct Trading — Pricing](https://www.cifinancial.com/ci-dt/ca/en/trade/pricing.html)  
 - [IBKR Campus — Options as part of an RRSP/TFSA strategy](https://www.interactivebrokers.com/campus/traders-insight/securities/options/options-as-part-of-an-rrsp-tfsa-strategy/)
 
 ## Risk sizing

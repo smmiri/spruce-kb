@@ -90,6 +90,6 @@ nav:
       - Put credit spread playbook: 03-strategies/put-credit-spread-playbook.md
       - Call credit spread playbook: 03-strategies/call-credit-spread-playbook.md
   - Canadian accounts:
-      - IBKR Canada notes: 05-canadian-accounts/ibkr-canada-notes.md
+      - Canadian brokers: 05-canadian-accounts/canadian-brokers.md
       - TFSA options constraints: 05-canadian-accounts/tfsa-options-constraints.md
       - Cash vs margin: 05-canadian-accounts/cash-vs-margin.md

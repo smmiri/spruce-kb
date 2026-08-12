@@ -60,7 +60,7 @@ Capture them somewhere private you will actually obey:
 
 ## What to do next
 
-If you are in Canada, read [IBKR notes](../05-canadian-accounts/ibkr-canada-notes.md), [TFSA constraints](../05-canadian-accounts/tfsa-options-constraints.md), and [cash vs margin](../05-canadian-accounts/cash-vs-margin.md) before you assume a strategy is allowed where you fund it.
+If you are in Canada, read [Canadian brokers](../05-canadian-accounts/canadian-brokers.md), [TFSA constraints](../05-canadian-accounts/tfsa-options-constraints.md), and [cash vs margin](../05-canadian-accounts/cash-vs-margin.md) before you assume a strategy is allowed where you fund it.
 
 ## Sources
 
