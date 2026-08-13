@@ -7,6 +7,10 @@ site_dir: site
 
 theme:
   name: material
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
   palette:
     - scheme: default
       primary: teal
@@ -30,6 +34,55 @@ theme:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fa
+          name: فارسی
+          build: true
+          site_description: پایگاه دانش آموزشی برای فرآیند عملیاتی defined-risk options
+          copyright: >
+            توصیه مالی نیست. Spruce یک پایگاه دانش آموزشی است.
+            Licensed under Apache-2.0.
+          theme:
+            language: fa
+            font:
+              text: Vazirmatn
+              code: Roboto Mono
+          nav_translations:
+            Home: خانه
+            Meta: متا
+            Disclaimer: سلب مسئولیت
+            How to use this site: نحوه استفاده از این سایت
+            Sources: منابع
+            Verification and sources (private): راستی‌آزمایی و منابع (خصوصی)
+            Open decisions (private): تصمیم‌های باز (خصوصی)
+            Migration tracker (private): پیگیری مهاجرت (خصوصی)
+            Foundations: مبانی
+            Glossary: Glossary
+            Options basics: مبانی آپشن
+            Single-option payoffs: Payoffهای تک‌آپشن
+            Greeks enough to operate: Greeks به‌اندازهٔ کار عملی
+            Weekly vs monthly: Weekly در برابر monthly
+            Credit-spread payoffs: Payoffهای credit spread
+            Risk management: مدیریت ریسک
+            Ways to manage risk: روش‌های مدیریت ریسک
+            Compare strategies (example): مقایسهٔ استراتژی‌ها (مثال)
+            Risk policy proposal: پیشنهاد سیاست ریسک
+            Credit-spread playbooks: Playbookهای credit spread
+            Defined-risk credit spreads: Credit spreadهای defined-risk
+            Put credit spread playbook: Playbook مربوط به put credit spread
+            Call credit spread playbook: Playbook مربوط به call credit spread
+            Canadian accounts: حساب‌های کانادایی
+            Canadian brokers: کارگزارهای کانادایی
+            TFSA options constraints: محدودیت‌های TFSA برای options
+            Cash vs margin: Cash در برابر margin
 
 markdown_extensions:
   - admonition

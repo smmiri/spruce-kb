@@ -16,3 +16,17 @@
 .md-typeset .admonition {
   font-size: 0.8rem;
 }
+
+/* Farsi: VazirMatn + keep code/math LTR inside RTL pages */
+html[lang="fa"] {
+  --md-text-font: "Vazirmatn";
+}
+
+html[lang="fa"] .md-typeset code,
+html[lang="fa"] .md-typeset pre,
+html[lang="fa"] .md-typeset kbd,
+html[lang="fa"] .md-typeset .arithmatex,
+html[lang="fa"] .md-typeset mjx-container {
+  direction: ltr;
+  unicode-bidi: isolate;
+}

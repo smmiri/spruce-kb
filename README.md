@@ -9,6 +9,17 @@ Public educational knowledge base for a **defined-risk options** operating proce
 - Curriculum and playbooks for credit spreads (PCS / CCS), risk policy drafts, and Canadian retail notes
 - Companion private ops tooling is **out of scope** for this repo
 
+## Languages
+
+The public site is bilingual. Use the header language switch:
+
+| Locale | URL | Notes |
+|--------|-----|-------|
+| English (default) | `/` | Existing pages unchanged |
+| فارسی | `/fa/` | RTL, VazirMatn; glossary term names and technical terms stay in English |
+
+Farsi sources are sibling files (`page.fa.md` next to `page.md`). See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Two builds
 
 | Build | Command | Includes |
@@ -22,7 +33,7 @@ pip install -r requirements.txt
 mkdocs serve -f mkdocs.public.yml   # what GitHub Pages deploys
 ```
 
-Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) (English) and [http://127.0.0.1:8000/fa/](http://127.0.0.1:8000/fa/) (Farsi).
 
 Suggested reading order: [How to use this site](docs/00-meta/how-to-use-this-site.md).
 
