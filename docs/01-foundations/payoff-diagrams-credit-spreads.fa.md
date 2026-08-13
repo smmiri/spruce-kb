@@ -1,13 +1,13 @@
-# Payoffهای credit spread
+# Payoff مربوط به credit spread
 
-قبلاً دیدید که credit spreads **یکی** از ابزارهای defined-risk در میان چند ابزارند. این صفحه ریاضی و شکل فقط برای put و call credit spreads است.
+قبلاً دیدید credit spread **یکی** از چند ابزار defined-risk است. این صفحه فقط ریاضی و شکل put و call credit spread است.
 
 !!! danger "توصیه مالی نیست"
-    کارمزد، assignment زودهنگام، و margin کارگزار نتیجهٔ واقعی را عوض می‌کنند. اعداد کارمزد را نادیده می‌گیرند.
+    کارمزد، assignment زودهنگام، و margin کارگزار نتیجهٔ واقعی را عوض می‌کنند. عددها کارمزد ندارند.
 
-## یادآوری: چرا max loss اغلب از max profit بیشتر است
+## یادآوری: چرا max loss معمولاً از max profit بیشتر است
 
-یک credit spread روی عرض \(W\) یک net credit برابر \(C\) جمع می‌کند. سپس:
+یک credit spread روی عرض \(W\)، net credit برابر \(C\) می‌گیرد. بعد:
 
 \[
 \text{Max profit} \approx C
@@ -17,7 +17,7 @@
 \text{Max loss} \approx W - C
 \]
 
-هر وقت \(C &lt; W/2\)، max loss از max profit بزرگ‌تر است. این رایج است: شما یک ناحیهٔ با احتمال بالاتر را در ازای چک محدود می‌فروشید، و برای long optionای که فاجعه را سقف می‌گذارد **پول داده‌اید**. با debit spread در [صفحهٔ مقایسه](../04-portfolio-and-risk/comparing-strategies-example.md) مقایسه کنید، جایی که max profit می‌تواند از debit بیشتر شود.
+هر وقت \(C &lt; W/2\)، max loss از max profit بزرگ‌تر است. این رایج است: ناحیه‌ای با احتمال بالاتر را در ازای یک چک محدود می‌فروشید، و برای long optionای که فاجعه را سقف می‌گذارد **پول داده‌اید**. با debit spread در [صفحهٔ مقایسه](../04-portfolio-and-risk/comparing-strategies-example.md) بسنجید؛ آن‌جا max profit می‌تواند از debit بیشتر شود.
 
 ---
 
@@ -36,7 +36,7 @@
 
 ## Put credit spread (bull put)
 
-Put برابر \(K_s\) را بفروشید، put برابر \(K_l\) را بخرید، همان expiry. \(W = K_s - K_l\).
+Put در \(K_s\) بفروشید، put در \(K_l\) بخرید، همان expiry. \(W = K_s - K_l\).
 
 | Outcome | Formula |
 |---------|---------|
@@ -59,22 +59,22 @@ Put برابر \(K_s\) را بفروشید، put برابر \(K_l\) را بخر�
   </svg>
 </figure>
 
-### مثال با credit سالم‌تر (باز هم زیان &gt; سود)
+### مثال با credit بهتر (باز هم زیان &gt; سود)
 
-Spread put برابر \$100 / \$95 را به credit **\$2.00** بفروشید (\$200).
+Spread put برابر \$100 / \$95 را با credit **\$2.00** باز کنید (\$200).
 
 - Max profit = **\$200**  
 - Max loss = **\$300**  
 - Breakeven = \$98  
 
-پایان صعودی (سهام \$110): **+\$200**. پایان نزولی از \$95 عبور کند: **−\$300**.  
-Credit را نسبت به مثال لاغر \$1.50 بهتر کردید، اما ساختار همچنان پاداش محدود در ازای زیان defined بزرگ‌تر می‌پردازد — از روی طراحی.
+اگر سهام \$110 تمام شود: **+\$200**. اگر از \$95 رد شود: **−\$300**.  
+Credit از مثال لاغر \$1.50 بهتر شد، ولی ساختار هنوز پاداش محدود می‌دهد در ازای زیان defined بزرگ‌تر — از روی طراحی.
 
 ---
 
 ## Call credit spread (bear call)
 
-Call برابر \(K_s\) را بفروشید، call برابر \(K_h\) را بخرید. \(W = K_h - K_s\). Breakeven برابر \(K_s + C\).
+Call در \(K_s\) بفروشید، call در \(K_h\) بخرید. \(W = K_h - K_s\). Breakeven برابر \(K_s + C\).
 
 <figure markdown="span">
   <svg viewBox="0 0 520 260" width="100%" role="img" aria-label="Call credit spread payoff">
@@ -93,7 +93,7 @@ Call برابر \(K_s\) را بفروشید، call برابر \(K_h\) را بخ�
 
 ### مثال
 
-Spread call برابر \$100 / \$105 را به credit **\$1.80** بفروشید.
+Spread call برابر \$100 / \$105 را با credit **\$1.80** باز کنید.
 
 - Max profit = **\$180**  
 - Max loss = **\$320**  
@@ -104,11 +104,11 @@ Spread call برابر \$100 / \$105 را به credit **\$1.80** بفروشید.
 ## عادت‌ها
 
 1. اندازه را از max loss برابر \(W - C\) بگیرید، نه از قیمت سهم.  
-2. Defined به‌معنای کوچک نیست.  
-3. وقتی کف مشخص می‌خواهید، این ساختار را به naked short ترجیح دهید.  
-4. اگر از «زیان بزرگ‌تر از سود» خوشتان نمی‌آید، شاید debit spreads یا long options برای آن ایده مناسب‌تر باشند — [مقایسه](../04-portfolio-and-risk/comparing-strategies-example.md) را دوباره ببینید.
+2. Defined یعنی کوچک نیست.  
+3. اگر کف مشخص می‌خواهید، این ساختار را به naked short ترجیح دهید.  
+4. اگر از «زیان بزرگ‌تر از سود» خوشتان نمی‌آید، شاید debit spread یا long option برای آن ایده مناسب‌تر باشد — [مقایسه](../04-portfolio-and-risk/comparing-strategies-example.md) را دوباره ببینید.
 
-## گام بعدی
+## بعد چه بخوانید
 
 [Defined-risk credit spreads](../03-strategies/defined-risk-credit-spreads.md) · [Playbook مربوط به PCS](../03-strategies/put-credit-spread-playbook.md) · [Playbook مربوط به CCS](../03-strategies/call-credit-spread-playbook.md)
 
@@ -119,4 +119,4 @@ Spread call برابر \$100 / \$105 را به credit **\$1.80** بفروشید.
 
 ---
 
-*توصیه مالی نیست. قوانین کارگزار را خودتان راستی‌آزمایی کنید.*
+*توصیه مالی نیست. قوانین کارگزار را خودتان چک کنید.*

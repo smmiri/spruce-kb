@@ -1,25 +1,25 @@
 # منابع
 
-مراجع عمومی برای بررسی تعاریف و heuristicهای رایج. این صفحه خوراک ایدهٔ معامله نیست.
+این‌ها مراجع عمومی‌اند برای چک کردن تعریف‌ها و قاعده‌های سرانگشتی رایج. فهرست ایدهٔ معامله نیست.
 
 !!! danger "توصیه مالی نیست"
-    منابع برای آموزش و راستی‌آزمایی مکانیک هستند — نه توصیه.
+    منابع برای فهم مکانیک‌اند، نه برای توصیه.
 
 ## برچسب‌های این سایت
 
 | Tag | معنی |
 |-----|---------|
-| `[verified]` | با حداقل ۲ منبع معتبر مستقل، یا صفحهٔ اصلی کارگزار برای همان ادعا، سازگار است |
-| `[operator preference]` | یک انتخاب عملیاتی مستند برای این دوره است، نه قانون بازار |
-| `[pending-verify]` | هنوز به پشتیبان منبع اولیهٔ قوی‌تری نیاز دارد |
+| `[verified]` | با دست‌کم دو منبع معتبر مستقل جور است، یا با صفحهٔ خود کارگزار برای همان ادعا |
+| `[operator preference]` | انتخاب مستند این دوره است، نه قانون بازار |
+| `[pending-verify]` | هنوز منبع اولیهٔ محکم‌تری می‌خواهد |
 
 ## مکانیک و ساختارها
 
 - [Investopedia — Vertical spread](https://www.investopedia.com/terms/v/verticalspread.asp)  
 - [Wikipedia — Credit spread (options)](https://en.wikipedia.org/wiki/Credit_spread_(option))  
-- OCC *Characteristics and Risks of Standardized Options* (معمولاً از طریق کارگزار شما)
+- OCC *Characteristics and Risks of Standardized Options* (معمولاً از طریق کارگزارتان)
 
-## Greeks و نوسان رویداد
+## Greeks و نوسان اطراف رویداد
 
 - [tastylive — Delta as a probability gauge](https://www.tastylive.com/news-insights/options-delta-predictive-probability-gauge-directional-measure)  
 - [tastylive — IV crush](https://www.tastylive.com/concepts-strategies/iv-crush)
@@ -40,10 +40,10 @@
 - [CI Direct Trading — Pricing](https://www.cifinancial.com/ci-dt/ca/en/trade/pricing.html)  
 - [IBKR Campus — Options as part of an RRSP/TFSA strategy](https://www.interactivebrokers.com/campus/traders-insight/securities/options/options-as-part-of-an-rrsp-tfsa-strategy/)
 
-## اندازه‌گذاری ریسک
+## اندازهٔ ریسک
 
-نوشته‌های خرده‌فروشی options معمولاً حدود **۱–۲٪ از equity** را به‌عنوان max loss در هر معاملهٔ defined-risk و باندهای مجموع «heat» را اغلب نزدیک **۱۰–۱۵٪** بحث می‌کنند. این‌ها را نقطهٔ مقایسه برای سیاست مکتوب خودتان ببینید — نه به‌عنوان توصیه.
+در نوشته‌های خرده‌فروشی options معمولاً حدود **۱–۲٪ از equity** را به‌عنوان max loss هر معاملهٔ defined-risk می‌بینید، و مجموع «heat» را اغلب نزدیک **۱۰–۱۵٪**. این‌ها را فقط برای مقایسه با سیاست مکتوب خودتان بگذارید — نه به‌عنوان توصیه.
 
 ---
 
-*توصیه مالی نیست. قوانین کارگزار و CRA را خودتان راستی‌آزمایی کنید.*
+*توصیه مالی نیست. قوانین کارگزار و CRA را خودتان چک کنید.*

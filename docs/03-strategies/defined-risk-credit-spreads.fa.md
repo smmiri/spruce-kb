@@ -1,58 +1,58 @@
 # Defined-risk credit spreads
 
-تا اینجا مکانیک options، دسته‌های ریسک، و مقایسهٔ دلاری کنارهم را دیده‌اید. این صفحه توضیح می‌دهد **چرا مسیر عملیاتی Spruce credit spreads را اولویت می‌دهد** — نه این‌که تنها استراتژی موجود باشند.
+تا این‌جا مکانیک options، دسته‌های ریسک، و مقایسهٔ دلاری را دیده‌اید. این صفحه می‌گوید **چرا مسیر کار Spruce credit spreads را جلو می‌گذارد** — نه این‌که تنها استراتژی دنیا باشند.
 
 !!! danger "توصیه مالی نیست"
-    اولویت برای یک سیستم عملیاتی شخصی توصیه نیست که همه باید premium بفروشند.
+    اولویت یک سیستم شخصی، توصیه نیست که همه premium بفروشند.
 
-## Credit spreads کجای نقشه می‌نشینند
+## Credit spread کجای نقشه است
 
-از [روش‌های مدیریت ریسک](../04-portfolio-and-risk/risk-management-categories.md):
+از [راه‌های مدیریت ریسک](../04-portfolio-and-risk/risk-management-categories.md):
 
-- یک **spread** هستند (یک option دیگری را hedge می‌کند).  
+- یک **spread** است (یک option، دیگری را hedge می‌کند).  
 - ریسک **defined** است (max loss ≈ width − credit).  
-- معمولاً **پاداش محدود** می‌دهند و اغلب **max loss &gt; max profit** — شکلی احتمال‌محور، نه بلیت بخت‌آزمایی.
+- معمولاً **پاداش محدود** می‌دهد و اغلب **max loss &gt; max profit** — شکلی احتمال‌محور، نه بلیت بخت‌آزمایی.
 
-ابزارهای معتبر دیگر روی همان نقشه: فقط sizing، covered calls، cash-secured puts، debit spreads، protective puts، سقف‌های heat پرتفوی.
+ابزارهای درست دیگر روی همان نقشه: فقط sizing، covered call، cash-secured put، debit spread، protective put، سقف heat پرتفوی.
 
-## چرا یک سیستم عملیاتی آن‌ها را دوست دارد
+## چرا سیستم عملیاتی این‌ها را دوست دارد
 
-برای مرور دسته‌ای و اتوماسیون بعدی، ساختار وقتی کمک می‌کند که:
+برای مرور دسته‌ای و بعداً اتوماسیون، ساختار وقتی کمک می‌کند که:
 
-1. Max loss در ورود مشخص باشد.  
-2. ریسک صعود نامحدود naked اجتناب شود.  
-3. Heat روی دفتر قابل جمع باشد.
+1. Max loss همان موقع ورود مشخص باشد.  
+2. ریسک صعود نامحدود naked در کار نباشد.  
+3. Heat روی کل دفتر قابل جمع باشد.
 
-Put credit spreads (PCS) و call credit spreads (CCS) این قیدها را برآورده می‌کنند. این یک **ترجیح مهندسی** برای ops مربوط به Spruce است — بعد از آموزش، نه به‌جای آموزش.
+Put credit spread (PCS) و call credit spread (CCS) همین قیدها را برآورده می‌کنند. این **ترجیح مهندسی** برای ops مربوط به Spruce است — بعد از آموزش، نه به‌جای آموزش.
 
 ## دو ساختار کاری
 
 | View | Structure | داستان |
 |------|-----------|-------|
-| سهام باید بالای short put بماند | PCS / bull put | Credit جمع کنید؛ ریسک سقوط با long put سقف دارد |
-| سهام باید زیر short call بماند | CCS / bear call | Credit جمع کنید؛ ریسک melt-up با long call سقف دارد |
+| سهام باید بالای short put بماند | PCS / bull put | Credit می‌گیرید؛ ریسک سقوط با long put سقف دارد |
+| سهام باید زیر short call بماند | CCS / bear call | Credit می‌گیرید؛ ریسک melt-up با long call سقف دارد |
 
-ریاضی payoff: [Payoffهای credit spread](../01-foundations/payoff-diagrams-credit-spreads.md).  
-مقایسهٔ منصفانه با رویکردهای دیگر: [مقایسهٔ استراتژی‌ها](../04-portfolio-and-risk/comparing-strategies-example.md).
+ریاضی payoff: [Payoff مربوط به credit spread](../01-foundations/payoff-diagrams-credit-spreads.md).  
+مقایسه با راه‌های دیگر: [مقایسهٔ استراتژی‌ها](../04-portfolio-and-risk/comparing-strategies-example.md).
 
-## طرح فرآیند
+## طرح کار
 
 1. Thesis  
 2. Expiration  
 3. Strikeها → max loss → سیاست ریسک  
 4. ورود یا رد  
 5. Journal  
-6. مدیریت با قوانینی که آرام نوشته شده‌اند  
+6. مدیریت با قوانینی که سر فرصت نوشته‌اید  
 
 ## یادداشت کانادایی
 
-Spreads چندپا اغلب به تأیید options بالاتر و حساب margin نیاز دارند. ببینید [محدودیت‌های TFSA](../05-canadian-accounts/tfsa-options-constraints.md).
+Spreads چندپا اغلب تأیید options بالاتر و حساب margin می‌خواهند. ببینید [محدودیت options در TFSA](../05-canadian-accounts/tfsa-options-constraints.md).
 
 ## Playbookها
 
 - [Playbook مربوط به put credit spread](put-credit-spread-playbook.md)  
 - [Playbook مربوط به call credit spread](call-credit-spread-playbook.md)  
-- [پیشنهاد سیاست ریسک](../04-portfolio-and-risk/risk-policy.md)  
+- [پیش‌نویس سیاست ریسک](../04-portfolio-and-risk/risk-policy.md)  
 
 ## منابع
 
@@ -61,4 +61,4 @@ Spreads چندپا اغلب به تأیید options بالاتر و حساب mar
 
 ---
 
-*توصیه مالی نیست. قوانین کارگزار را خودتان راستی‌آزمایی کنید.*
+*توصیه مالی نیست. قوانین کارگزار را خودتان چک کنید.*

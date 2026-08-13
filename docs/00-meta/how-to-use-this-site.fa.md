@@ -1,9 +1,9 @@
-# نحوه استفاده از این سایت
+# چطور از این سایت استفاده کنید
 
-Spruce یک دورهٔ کوتاه است. وسوسهٔ پریدن مستقیم به playbookهای credit spread را کنار بگذارید. آن صفحات فرض می‌کنند options و منوی ریسک را از قبل می‌فهمید.
+Spruce یک دورهٔ کوتاه است. مستقیم نروید سراغ playbookهای credit spread. آن صفحه‌ها فرض می‌کنند options و منوی ریسک را از قبل بلدید.
 
 !!! danger "توصیه مالی نیست"
-    فقط محتوای آموزشی. قوانین کارگزار و CRA را خودتان راستی‌آزمایی کنید.
+    فقط آموزش است. قوانین کارگزار و CRA را خودتان چک کنید.
 
 ## مسیر مطالعه
 
@@ -12,29 +12,29 @@ Spruce یک دورهٔ کوتاه است. وسوسهٔ پریدن مستقیم �
 1. [سلب مسئولیت](disclaimer.md)  
 2. [Glossary](../01-foundations/glossary.md)  
 3. [مبانی آپشن](../01-foundations/options-basics.md)  
-4. [Payoffهای تک‌آپشن](../01-foundations/single-option-payoffs.md)  
-5. [Greeks](../01-foundations/greeks-enough-to-operate.md) → [Weekly در برابر monthly](../01-foundations/expirations-weekly-monthly.md)  
+4. [Payoff تک‌آپشن](../01-foundations/single-option-payoffs.md)  
+5. [Greeks](../01-foundations/greeks-enough-to-operate.md) → [Weekly یا monthly](../01-foundations/expirations-weekly-monthly.md)  
 
 **بخش B — مدیریت ریسک**
 
-6. [روش‌های مدیریت ریسک](../04-portfolio-and-risk/risk-management-categories.md)  
+6. [راه‌های مدیریت ریسک](../04-portfolio-and-risk/risk-management-categories.md)  
 7. [مقایسهٔ استراتژی‌ها با یک مثال](../04-portfolio-and-risk/comparing-strategies-example.md)  
 
 **بخش C — Credit spreads (یک ابزار)**
 
-8. [Payoffهای credit spread](../01-foundations/payoff-diagrams-credit-spreads.md)  
+8. [Payoff مربوط به credit spread](../01-foundations/payoff-diagrams-credit-spreads.md)  
 9. Playbookها و [سیاست ریسک](../04-portfolio-and-risk/risk-policy.md)  
-10. یادداشت‌های کانادایی در صورت مرتبط بودن  
+10. اگر به کارتان می‌آید، یادداشت‌های کانادایی  
 
 ## برچسب‌ها
 
 | Tag | معنی |
 |-----|---------|
-| `[verified]` | با منابع عمومی مستقل یا صفحهٔ اصلی کارگزار هم‌خوان است |
-| `[operator preference]` | پیش‌فرض آموزشی که می‌توانید تغییر دهید |
-| `[pending-verify]` | به منبع اولیهٔ قوی‌تری نیاز دارد |
+| `[verified]` | با منابع عمومی مستقل یا صفحهٔ خود کارگزار جور درمی‌آید |
+| `[operator preference]` | پیش‌فرض این دوره؛ می‌توانید عوضش کنید |
+| `[pending-verify]` | هنوز منبع قوی‌تری می‌خواهد |
 
-## پیش‌نمایش محلی
+## پیش‌نمایش روی سیستم خودتان
 
 ```bash
 pip install -r requirements.txt

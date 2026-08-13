@@ -17,9 +17,14 @@
   font-size: 0.8rem;
 }
 
-/* Farsi: VazirMatn + keep code/math LTR inside RTL pages */
+/* Farsi: VazirMatn on RTL pages, and on the language switcher even in English */
 html[lang="fa"] {
   --md-text-font: "Vazirmatn";
+}
+
+.md-header .md-select__link[hreflang="fa"],
+.md-select__link[hreflang="fa"] {
+  font-family: "Vazirmatn", sans-serif;
 }
 
 html[lang="fa"] .md-typeset code,
