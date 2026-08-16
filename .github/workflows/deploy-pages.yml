@@ -7,8 +7,7 @@
 #   Then re-run this workflow (Actions → Deploy to GitHub Pages → Run workflow).
 #
 # Local review:
-#   Full (includes private pages):  mkdocs serve
-#   Public deploy preview:          mkdocs serve -f mkdocs.public.yml
+#   mkdocs serve
 #   Open http://127.0.0.1:8000/
 
 name: Deploy to GitHub Pages
@@ -46,8 +45,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build public MkDocs site
-        run: mkdocs build -f mkdocs.public.yml --strict
+      - name: Build MkDocs site
+        run: mkdocs build --strict
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -58,7 +57,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site-public
+          path: site
 
   deploy:
     needs: build

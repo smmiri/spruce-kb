@@ -20,17 +20,12 @@ The public site is bilingual. Use the header language switch:
 
 Farsi sources are sibling files (`page.fa.md` next to `page.md`). See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Two builds
-
-| Build | Command | Includes |
-|-------|---------|----------|
-| **Local / full** | `mkdocs serve` | Curriculum + private operator pages (open decisions, migration tracker, verification log) |
-| **Public (Pages)** | `mkdocs serve -f mkdocs.public.yml` | Curriculum only — no personal decision log, migration tracker, or private verification notes |
+## Local preview
 
 ```bash
 cd spruce-kb
 pip install -r requirements.txt
-mkdocs serve -f mkdocs.public.yml   # what GitHub Pages deploys
+mkdocs serve
 ```
 
 Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) (English) and [http://127.0.0.1:8000/fa/](http://127.0.0.1:8000/fa/) (Farsi).
@@ -39,7 +34,7 @@ Suggested reading order: [How to use this site](docs/00-meta/how-to-use-this-sit
 
 ## GitHub Pages
 
-On push to `main`, [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) builds with **`mkdocs.public.yml`** and deploys to GitHub Pages.
+On push to `main`, [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) runs `mkdocs build --strict` and deploys to GitHub Pages.
 
 Canonical URL: **https://spruce.smmiri.com/**
 

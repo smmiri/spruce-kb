@@ -24,7 +24,9 @@ Spruce is a short course. Resist the urge to jump straight to credit-spread play
 
 8. [Credit-spread payoffs](../01-foundations/payoff-diagrams-credit-spreads.md)  
 9. Playbooks and [risk policy](../04-portfolio-and-risk/risk-policy.md)  
-10. Canadian notes if relevant  
+10. [Operating checklists](../06-operating-playbooks/operating-checklists.md) · [worked examples](../08-worked-examples/example-long-call.md)  
+11. Canadian notes if relevant  
+12. [HITL / dry-run](../07-automation-concepts/human-in-the-loop.md) before expecting automation  
 
 ## Tags
 
@@ -38,6 +40,5 @@ Spruce is a short course. Resist the urge to jump straight to credit-spread play
 
 ```bash
 pip install -r requirements.txt
-mkdocs serve -f mkdocs.public.yml   # public site
-mkdocs serve                        # includes private operator pages
+mkdocs serve
 ```

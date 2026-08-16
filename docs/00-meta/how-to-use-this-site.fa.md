@@ -38,6 +38,5 @@ Spruce یک دورهٔ کوتاه است. مستقیم نروید سراغ playb
 
 ```bash
 pip install -r requirements.txt
-mkdocs serve -f mkdocs.public.yml   # public site
-mkdocs serve                        # includes private operator pages
+mkdocs serve
 ```

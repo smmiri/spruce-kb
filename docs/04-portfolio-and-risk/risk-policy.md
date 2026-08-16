@@ -45,18 +45,37 @@ If 20% heat feels aggressive, try this trial band first:
 
 Then loosen or tighten on purpose — not by accident after a hot streak.
 
+## Operator-locked trial (percent of equity)
+
+Locked in the private decision log (Week-2 workshop). Dollar amounts stay **private** — public pages use percents only. `[operator preference]`
+
+| Control | Locked trial |
+|---------|----------------|
+| Max loss per trade | **2%** of equity (structural max loss) |
+| Portfolio heat | **12%** of equity |
+| One underlying | **5%** of equity |
+| One sector | **15%** of heat |
+| Earnings blackout | **5** trading days (new short premium) |
+| Soft max open positions | **6–8** |
+| Manage default | Close or roll around **21 DTE** (do not sit expiration week as the base case) |
+| Short-delta band (when on credit spreads) | **~15–30** absolute delta; width so max loss respects the 2% cap |
+| Undefined / naked | **Banned** |
+| Live ladder | Long calls/puts → covered calls → CCS/PCS |
+
+These replace the looser 20% / 10% / 25% *starter defaults* in the table above for this operator. Recheck if equity or the debit cap changes.
+
 ## Write your own numbers
 
-Capture them somewhere private you will actually obey:
+Capture dollars somewhere private you will actually obey (not on a public site):
 
 | Decision | Your number |
 |----------|-------------|
-| Max loss per trade | |
-| Max portfolio heat | |
-| Max loss per underlying | |
-| Max heat per sector | |
-| Earnings blackout (trading days) | |
-| Soft max open positions | |
+| Max loss per trade | 2% of equity (private CAD figure in operator log) |
+| Max portfolio heat | 12% |
+| Max loss per underlying | 5% |
+| Max heat per sector | 15% of heat |
+| Earnings blackout (trading days) | 5 |
+| Soft max open positions | 6–8 |
 
 ## What to do next
 

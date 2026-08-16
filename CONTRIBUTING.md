@@ -14,7 +14,7 @@ Thank you for interest in improving Spruce. This knowledge base is educational a
 
 1. Open an issue describing the change (typo, clarification, new page outline).
 2. Prefer small PRs that map to existing taxonomy pages under `docs/`.
-3. Run `mkdocs build -f mkdocs.public.yml --strict` locally before opening a PR.
+3. Run `mkdocs build --strict` locally before opening a PR.
 4. Do not commit secrets, portfolio exports, or broker credentials.
 
 ## Farsi translations
@@ -25,7 +25,6 @@ Public pages have a Farsi sibling: `page.md` (English) and `page.fa.md` (Farsi).
 - Keep glossary **term names** and technical terms in English (Call, Put, Delta, PCS, credit spread, TFSA, and so on).
 - Keep markdown link targets without a `.fa` suffix (`glossary.md`, not `glossary.fa.md`).
 - Keep formulas, tickers, dollar amounts, tags (`[verified]`, …), and bash commands unchanged.
-- Private operator pages may stay English-only; the build falls back to the English file.
 - Farsi UI/body type is VazirMatn; do not switch Farsi pages to another family.
 
 ## Voice

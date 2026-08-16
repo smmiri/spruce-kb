@@ -17,6 +17,11 @@ Read in order the first time.
 4. [Single-option payoffs](01-foundations/single-option-payoffs.md)  
 5. [Greeks](01-foundations/greeks-enough-to-operate.md) → [Weekly vs monthly](01-foundations/expirations-weekly-monthly.md)  
 
+### 1b. What to actually buy (beginner)
+
+- [Beginner selection scorecard](02-watchlist-and-valuation/beginner-selection-scorecard.md) — how to score a list  
+- [Example scored watchlist](02-watchlist-and-valuation/example-scored-watchlist.md) — tickers + scores, no account sizes  
+
 ### 2. Risk management as a menu
 
 6. [Ways to manage risk](04-portfolio-and-risk/risk-management-categories.md)  
@@ -27,12 +32,13 @@ Read in order the first time.
 8. [Credit-spread payoffs](01-foundations/payoff-diagrams-credit-spreads.md)  
 9. [Defined-risk overview](03-strategies/defined-risk-credit-spreads.md) → [PCS](03-strategies/put-credit-spread-playbook.md) → [CCS](03-strategies/call-credit-spread-playbook.md)  
 10. [Risk policy proposal](04-portfolio-and-risk/risk-policy.md)  
+11. [Operating checklists](06-operating-playbooks/operating-checklists.md) · [long-call example](08-worked-examples/example-long-call.md) · [PCS example](08-worked-examples/example-pcs.md)  
 
 ### 4. Canadian account notes
 
-11. [Canadian brokers](05-canadian-accounts/canadian-brokers.md) · [TFSA](05-canadian-accounts/tfsa-options-constraints.md) · [Cash vs margin](05-canadian-accounts/cash-vs-margin.md)  
+12. [Canadian brokers](05-canadian-accounts/canadian-brokers.md) · [TFSA](05-canadian-accounts/tfsa-options-constraints.md) · [Cash vs margin](05-canadian-accounts/cash-vs-margin.md)  
 
-Optional: [Sources](00-meta/sources.md).
+Optional: [HITL / dry-run](07-automation-concepts/human-in-the-loop.md) · [Sources](00-meta/sources.md).
 
 ## What you will learn
 

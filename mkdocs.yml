@@ -1,6 +1,7 @@
 site_name: Spruce Knowledge Base
 site_description: Educational knowledge base for defined-risk options operating process
 site_author: Spruce
+site_url: https://spruce.smmiri.com/
 
 docs_dir: docs
 site_dir: site
@@ -61,9 +62,6 @@ plugins:
             Disclaimer: سلب مسئولیت
             How to use this site: چطور از این سایت استفاده کنید
             Sources: منابع
-            Verification and sources (private): بررسی منابع (خصوصی)
-            Open decisions (private): تصمیم‌های باز (خصوصی)
-            Migration tracker (private): پیگیری مهاجرت (خصوصی)
             Foundations: مبانی
             Glossary: Glossary
             Options basics: مبانی آپشن
@@ -83,6 +81,15 @@ plugins:
             Canadian brokers: کارگزارهای کانادایی
             TFSA options constraints: محدودیت options در TFSA
             Cash vs margin: Cash یا margin
+            Operating checklists: چک‌لیست عملیات
+            HITL and dry-run: انسان در حلقه
+            Worked example long call: مثال long call
+            Worked example PCS: مثال PCS
+            Beginner selection scorecard: برگهٔ انتخاب مبتدی
+            Example scored watchlist: نمونهٔ واچ‌لیست امتیازدهی‌شده
+            Watchlist and selection: واچ‌لیست و انتخاب
+            Operating: عملیات
+            Worked examples: مثال‌ها
 
 markdown_extensions:
   - admonition
@@ -116,7 +123,7 @@ extra:
   social: []
 
 copyright: >
-  Not financial advice. Spruce is an educational system.
+  Not financial advice. Spruce is an educational knowledge base.
   Licensed under Apache-2.0.
 
 nav:
@@ -125,9 +132,6 @@ nav:
       - Disclaimer: 00-meta/disclaimer.md
       - How to use this site: 00-meta/how-to-use-this-site.md
       - Sources: 00-meta/sources.md
-      - Verification and sources (private): 00-meta/verification-and-sources.md
-      - Open decisions (private): 00-meta/open-decisions.md
-      - Migration tracker (private): 00-meta/migration-tracker.md
   - Foundations:
       - Glossary: 01-foundations/glossary.md
       - Options basics: 01-foundations/options-basics.md
@@ -135,6 +139,9 @@ nav:
       - Greeks enough to operate: 01-foundations/greeks-enough-to-operate.md
       - Weekly vs monthly: 01-foundations/expirations-weekly-monthly.md
       - Credit-spread payoffs: 01-foundations/payoff-diagrams-credit-spreads.md
+  - Watchlist and selection:
+      - Beginner selection scorecard: 02-watchlist-and-valuation/beginner-selection-scorecard.md
+      - Example scored watchlist: 02-watchlist-and-valuation/example-scored-watchlist.md
   - Risk management:
       - Ways to manage risk: 04-portfolio-and-risk/risk-management-categories.md
       - Compare strategies (example): 04-portfolio-and-risk/comparing-strategies-example.md
@@ -147,3 +154,9 @@ nav:
       - Canadian brokers: 05-canadian-accounts/canadian-brokers.md
       - TFSA options constraints: 05-canadian-accounts/tfsa-options-constraints.md
       - Cash vs margin: 05-canadian-accounts/cash-vs-margin.md
+  - Operating:
+      - Checklists: 06-operating-playbooks/operating-checklists.md
+      - HITL and dry-run: 07-automation-concepts/human-in-the-loop.md
+  - Worked examples:
+      - Long call (anonymized): 08-worked-examples/example-long-call.md
+      - Put credit spread (anonymized): 08-worked-examples/example-pcs.md
