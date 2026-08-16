@@ -32,7 +32,7 @@ Read in order the first time.
 8. [Credit-spread payoffs](01-foundations/payoff-diagrams-credit-spreads.md)  
 9. [Defined-risk overview](03-strategies/defined-risk-credit-spreads.md) → [PCS](03-strategies/put-credit-spread-playbook.md) → [CCS](03-strategies/call-credit-spread-playbook.md)  
 10. [Risk policy proposal](04-portfolio-and-risk/risk-policy.md)  
-11. [Operating checklists](06-operating-playbooks/operating-checklists.md) · [long-call example](08-worked-examples/example-long-call.md) · [PCS example](08-worked-examples/example-pcs.md)  
+11. [Operating checklists](06-operating-playbooks/operating-checklists.md) · [order types](06-operating-playbooks/order-types.md) · [long-call example](08-worked-examples/example-long-call.md) · [PCS example](08-worked-examples/example-pcs.md)  
 
 ### 4. Canadian account notes
 

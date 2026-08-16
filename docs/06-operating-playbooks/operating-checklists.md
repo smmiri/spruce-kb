@@ -12,12 +12,14 @@ Use these in a batch session. They encode the operator trial rules as **percent 
 - [ ] You know whether you are on ladder step **1** (long calls/puts), **2** (covered calls), or **3** (CCS/PCS)  
 - [ ] USD account is enabled if the underlying is U.S.-listed  
 - [ ] Earnings calendar checked for names you might touch  
+- [ ] If the cash market is **closed**: stock/ETF ticket is **Limit** at last close, not Market ([order types](order-types.md))  
 
 ## Entry
 
 - [ ] Thesis in one or two sentences (journal first)  
 - [ ] Name is on the **starter** watchlist, not the later/high-vol bucket, unless you explicitly override  
-- [ ] Liquidity: you can see a two-sided market you would actually trade  
+- [ ] Stock/ETF: **limit** (or you are watching a live tape and accept a market print)  
+- [ ] Options: **regular hours** only; you can see a two-sided market you would actually trade  
 - [ ] Expiration: prefer a **monthly**; if weekly, size smaller  
 - [ ] **Max loss** of this structure ≤ **2%** of equity  
 - [ ] After a hypothetical fill: heat ≤ **12%**; this name ≤ **5%**; this sector ≤ **15%** of heat  
@@ -42,6 +44,7 @@ Use these in a batch session. They encode the operator trial rules as **percent 
 
 ## Related
 
+- [Order types](order-types.md)  
 - [Risk policy](../04-portfolio-and-risk/risk-policy.md)  
 - [PCS playbook](../03-strategies/put-credit-spread-playbook.md) · [CCS playbook](../03-strategies/call-credit-spread-playbook.md)  
 - [HITL / dry-run](../07-automation-concepts/human-in-the-loop.md)  

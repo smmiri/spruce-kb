@@ -24,7 +24,7 @@ Spruce is a short course. Resist the urge to jump straight to credit-spread play
 
 8. [Credit-spread payoffs](../01-foundations/payoff-diagrams-credit-spreads.md)  
 9. Playbooks and [risk policy](../04-portfolio-and-risk/risk-policy.md)  
-10. [Operating checklists](../06-operating-playbooks/operating-checklists.md) · [worked examples](../08-worked-examples/example-long-call.md)  
+10. [Operating checklists](../06-operating-playbooks/operating-checklists.md) · [order types](../06-operating-playbooks/order-types.md) · [worked examples](../08-worked-examples/example-long-call.md)  
 11. Canadian notes if relevant  
 12. [HITL / dry-run](../07-automation-concepts/human-in-the-loop.md) before expecting automation  
 

@@ -49,5 +49,10 @@ Plain-language definitions. Skim once, then return whenever a page uses a term y
 | **Watchlist** | Names you **follow**. You might own $0. |
 | **Portfolio / “actually bought”** | Names you spent real money on. |
 | **Envelope / sleeve** | A planning bucket of cash (e.g. $24k to own shares), not a special account type. |
+| **Market order** | Buy or sell at the **next available** price. No cap. If the market is closed, that price is usually the **next open**. |
+| **Limit order** | Buy only at a stated price **or cheaper** (sell at that price or higher). May not fill. |
+| **Stop / stop-limit** | Waits until price crosses a trigger, then becomes a market or limit order. Not a default entry tool here. |
+| **Gap** | The next session’s first trade is away from the prior close (news, futures, weekend). |
+| **Queued order** | Sent while the market is closed; the broker typically **submits it at the next regular open**. |
 
 Payoff formulas for single options are on [Single-option payoffs](single-option-payoffs.md). Credit-spread formulas are on [Credit-spread payoffs](payoff-diagrams-credit-spreads.md). Compare structures on [Compare strategies](../04-portfolio-and-risk/comparing-strategies-example.md). Public references: [Sources](../00-meta/sources.md).

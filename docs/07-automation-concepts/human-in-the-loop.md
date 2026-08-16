@@ -13,7 +13,7 @@ Spruce-ops is not an autopilot. The agent may **observe** and **suggest**. It ma
 | **Suggest-only** | Candidates and management notes. You decide; the journal records skip / approve / reject / defer. |
 | **Execute-with-approval** | Broker submit only after you approve, policy passes, dry-run is off, kill-switch is off. |
 
-Default for a long time: **suggest-only**, with **dry-run on**.
+Default for a long time: **suggest-only**, with **dry-run on**. spruce-ops Suggest-only MVP: in-app candidates queue + journal decisions; Telegram / broker send stay later.
 
 ## Dry-run
 

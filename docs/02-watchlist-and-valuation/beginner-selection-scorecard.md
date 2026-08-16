@@ -20,11 +20,11 @@ Once names pass StockFit, dollars are not equal-weight by default. A simple **co
 
 | Piece | Share of the own-for-years envelope | Idea |
 |-------|--------------------------------------|------|
-| **Core** | about **60%** | One Canadian-listed **all-in-one equity ETF** (thousands of stocks in one CAD ticker) |
-| **Satellites** | about **40%** | A few companies you actually follow |
+| **Core** | about **40–60%** | One Canadian-listed **equity ETF** — either a global all-in-one *or* a single index (for example S&P 500 in CAD). Smaller core if satellites are companies **outside** that index |
+| **Satellites** | the rest | A few companies you actually follow that are **not already inside the core** |
 | **One company cap** | about **15%** of that envelope | Stops a single stock from becoming the whole portfolio |
 
-Do not hold two all-in-one ETFs that do the same job. Extra Canada-only or S&P 500 ETFs **on top of** an all-in-one usually **increase** concentration, not balance.
+Do not hold two ETFs that do the same job (two all-in-ones, or an all-in-one **plus** the S&P 500). If the core **is** the S&P 500, extra AAPL/GOOGL-type shares usually **increase** concentration, not balance. Satellites that spread a US-index core are typically **non-US** companies (Canada, Europe, Asia), not more S&P 500 names.
 
 Dollar examples stay in the operator’s private log, not on this public page. A scrubbed ticker table is on [Example scored watchlist](example-scored-watchlist.md).
 
@@ -42,7 +42,7 @@ Dollar examples stay in the operator’s private log, not on this public page. A
 
 **Do not start with:** Kelly (needs a real edge you do not have yet), or a full **contract grader** (scores every strike). Those wait until you have a live chain feed.
 
-**Later name columns (operator pick, D20):** a **QVM-lite** rank (quality + value + momentum, 0–9) can order the own-for-years shortlist. An **LIV** column (liquidity + IV rank + earnings/events) can order option *names*. IV rank needs a 52-week IV history — leave it blank until the broker or ops can fill it. Piotroski F-score is a company-only overlay (not ETFs). Greenblatt’s Magic Formula ranks a *large universe*, not a 12-name friends list.
+**Name columns (D20 locked):** a **QVM-lite** rank (quality + value + momentum, 0–9) orders the own-for-years shortlist inside StockFit ≥ 2. An **LIV** column (liquidity + IV rank + earnings/events) orders option *names*. IV rank needs a 52-week IV history — leave it blank until the broker or ops can fill it; MVP uses the liquidity leg. Piotroski F-score is a company-only overlay (not ETFs). Greenblatt’s Magic Formula ranks a *large universe*, not a 12-name friends list.
 
 **Ladder reminder:** you are still on **long calls/puts first**. For longs, OptionsFit is mostly **liquidity + size + earnings**, not selling 16-delta premium. The delta-as-POP rules become the main *trade* filter when you reach credit spreads. The *name* filter (this page) is useful from day one.
 
@@ -68,14 +68,14 @@ Canadian-listed ETFs still score well **if they are on the watchlist**. If they 
 
 Before a **live** options order, still check: earnings blackout (short premium), and max loss vs 2%/12%. Those are **trade** checks, not name scores.
 
-## How this becomes automation later
+## How this becomes automation
 
 Same columns, same names:
 
-1. **Now:** score the current watchlist by hand (private table).  
-2. **Ops weeks 3–4:** store `stock_fit`, `options_fit`, gates, as-of date.  
-3. **Weeks 5–8:** suggest “high OptionsFit + passes liquidity/earnings/size.”  
-4. **Later:** refresh scores; optional QVM / IV-rank (LIV) columns; still HITL. No Magic Formula or contract grader until the data exists.
+1. **Done:** score the current watchlist by hand (private table).  
+2. **Done (ops):** store StockFit / OptionsFit, QVM-lite, LIV liquidity, gates.  
+3. **Suggest-only MVP:** propose high OptionsFit + LIV liquidity (and underfunded D19 stock names); human records skip / approve / reject / defer.  
+4. **Later:** refresh scores; fill IV-rank on LIV; still HITL. No Magic Formula or contract grader until the data exists.
 
 The dynamic watchlist is **re-scoring and suggesting**, not scraping the internet onto the list.
 
